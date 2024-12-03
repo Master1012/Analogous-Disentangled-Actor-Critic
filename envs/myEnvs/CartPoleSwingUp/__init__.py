@@ -1,4 +1,4 @@
-from gym import make as gym_make
+from gymnasium import make as gym_make
 
 from envs.myEnvs.CartPoleSwingUp.env import CartPoleSwingUpEnv, CartPoleSwingUpContinuousEnv
 

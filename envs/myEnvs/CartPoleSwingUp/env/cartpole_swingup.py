@@ -13,9 +13,9 @@ hardmaru's changes:
 More difficult, since dt is 0.05 (not 0.01), and only 200 timesteps
 """
 
-import gym
-from gym import spaces
-from gym.utils import seeding
+import gymnasium
+from gymnasium import spaces
+from gymnasium.utils import seeding
 import logging
 import math
 import numpy as np
@@ -23,7 +23,7 @@ import numpy as np
 logger = logging.getLogger(__name__)
 
 
-class CartPoleSwingUpEnv(gym.Env):
+class CartPoleSwingUpEnv(gymnasium.Env):
     metadata = {
         'render.modes': ['human', 'rgb_array'],
         'video.frames_per_second': 50

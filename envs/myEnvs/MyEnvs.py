@@ -1,5 +1,5 @@
 # import roboschool
-import gym
+import gymnasium as gym
 from copy import deepcopy
 
 from envs.myEnvs.CartPoleSwingUp import make

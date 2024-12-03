@@ -1,7 +1,7 @@
 import random
 # import roboschool
-import gym
-import gym.spaces as spaces
+import gymnasium as gym
+import gymnasium.spaces as spaces
 import numpy as np
 from collections import deque
 import os
@@ -54,7 +54,7 @@ class EnvironmentWrapper():
                 # Gym environment
                 self.env = gym.make(env_name)
                 self.env_type = "gym"
-                self.env.seed(seed)
+                # self.env.seed(seed)
 
                 self.gym_max_episode_steps = self.env._max_episode_steps
             except gym.error.Error:
@@ -220,7 +220,7 @@ class EnvironmentWrapper():
                 elif len(action) == 1:
                     action = [action[0] // self.env.boardSize[1], action[0] % self.env.boardSize[1]]
 
-            next_state, reward, done, info = self.env.step(action)
+            next_state, reward, done,truncated, info = self.env.step(action)
 
             if self.enable_record and not info["unchanged"]:
                 self.level_file_exporter.record_next(self.env.viewParser, info["action_for_viewer"])
@@ -239,7 +239,7 @@ class EnvironmentWrapper():
             reward -= 0.1 * old_action[0] + 0.05 * old_action[0] ** 2
         elif self.env_type == "gym":
             
-            next_state, reward, done, info = self.env.step(action)
+            next_state, reward, done,truncated, info = self.env.step(action)
 
             if len(self.observation_space) == 3:
                 next_state = PreprocessAtariStates(next_state)

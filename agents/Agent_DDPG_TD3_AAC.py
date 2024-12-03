@@ -297,6 +297,7 @@ class Agent_DDPG_TD3_AAC(Agent):
 
     def action(self, state, mode = "train"):
         if mode == "train":
+            print("state",state)
             action = self.to_numpy(
                 self.actor(self.to_tensor(state).unsqueeze(0), mode = "Ent").squeeze(0) +
                 self.normal([self.action_params["dims"]], mean = 0.0, std = self.sigma)

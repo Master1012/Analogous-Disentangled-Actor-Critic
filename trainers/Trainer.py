@@ -183,14 +183,14 @@ class Trainer():
         while step < self.args.max_training_steps:
             # Reset if it is the start of episode
             if state is None:
-                state = deepcopy(self.env.reset())
+                state,info = deepcopy(self.env.reset())
                 self.agent.reset()
 
             # Select action
             action = self.agent.action(state, mode = "train")
 
             # Interact with environment
-            next_state, reward, done, info = self.env.step(action)
+            next_state, reward, done,info = self.env.step(action)
             next_state = deepcopy(next_state)
 
             # For intrinsic reward
@@ -687,7 +687,7 @@ class Trainer():
         results = []
         for episode in range(self.args.evaluate_num_episodes):
             # Reset environment
-            state = deepcopy(self.env_for_eval.reset(info = info))
+            state,info = deepcopy(self.env_for_eval.reset(info = info))
             episode_step = 0
             episode_reward = 0.0
 

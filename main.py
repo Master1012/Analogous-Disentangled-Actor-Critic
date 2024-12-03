@@ -19,8 +19,8 @@ CODE_VERSION = "1.1.0"
 
 def main():
     parser = argparse.ArgumentParser(description = "PyTorch package for RL (by Anji Liu)")
-    parser.add_argument("--env-name", type = str, default = "Pendulum-v0",
-                        help = "Environment name (default: Pendulum-v0)")
+    parser.add_argument("--env-name", type = str, default = "Pendulum-v1",
+                        help = "Environment name (default: Pendulum-v1)")
     parser.add_argument("--agent", type = str, default = "DDPG_TD3_AAC",
                         help = "Name of the agent (default: DDPG_TD3_AAC)")
     parser.add_argument("--mode", type = str, default = "train",
@@ -121,6 +121,6 @@ def main():
 
 
 if __name__ == "__main__":
-    mp.set_start_method("forkserver")
+    # mp.set_start_method("forkserver")
 
     main()
