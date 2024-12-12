@@ -43,20 +43,21 @@ class EnvironmentWrapper():
 
             self.level_file_exporter = LevelFileExporter(extra_info["level_index"])
             self.enable_record = False
+
         elif env_name == "CartPole-v0":
             self.env = gym.make("CartPole-v0")
             self.env_type = "gym"
             self.env.seed(seed)
-
             self.gym_max_episode_steps = self.env._max_episode_steps
+
         else:
             try:
                 # Gym environment
                 self.env = gym.make(env_name)
                 self.env_type = "gym"
                 # self.env.seed(seed)
-
                 self.gym_max_episode_steps = self.env._max_episode_steps
+
             except gym.error.Error:
                 if MyEnvs.compatible(env_name):
                     self.env = MyEnvs(env_name)
@@ -75,6 +76,7 @@ class EnvironmentWrapper():
             # Action space
             self.action_mode = "Discrete"
             self.action_n = self.env.action_num
+
         elif env_name == "CartPole-v0":
             self.observation_space = self.env.observation_space.shape
             self.action_space = gym.make("Pendulum-v0").action_space
@@ -84,6 +86,7 @@ class EnvironmentWrapper():
             self.action_mode = "Continuous"
             self.action_dim = self.action_space.shape[0]
             self.action_range = [self.action_space.low, self.action_space.high]
+
         elif self.env_type == "gym":
             # State space
             if not isinstance(self.env.observation_space, spaces.Box):
@@ -101,12 +104,14 @@ class EnvironmentWrapper():
             if isinstance(self.env.action_space, spaces.Discrete):
                 self.action_mode = "Discrete"
                 self.action_n = self.env.action_space.n
+
             elif isinstance(self.env.action_space, spaces.Box):
                 self.action_mode = "Continuous"
                 self.action_dim = self.env.action_space.shape[0]
                 self.action_range = [self.env.action_space.low[0], self.env.action_space.high[0]]
             else:
                 raise RuntimeError("Unknown action space {}".format(type(self.env.action_space)))
+        
         elif self.env_type == "myenv":
             self.observation_space = self.env.observation_space
             self.action_mode = self.env.action_mode
@@ -175,8 +180,7 @@ class EnvironmentWrapper():
         # elif self.env_name == "CartPole-v0":
 
         elif self.env_type == "gym":
-            state = self.env.reset()
-
+            state,_= self.env.reset()
             if len(self.observation_space) == 3:
                 state = PreprocessAtariStates(state)
 
@@ -190,6 +194,7 @@ class EnvironmentWrapper():
                 )
 
                 self.last_atari_frames.append(origin_state)
+
         elif self.env_type == "myenv":
             state = self.env.reset()
         else:
@@ -224,6 +229,7 @@ class EnvironmentWrapper():
 
             if self.enable_record and not info["unchanged"]:
                 self.level_file_exporter.record_next(self.env.viewParser, info["action_for_viewer"])
+        
         elif self.env_name == "CartPole-v0":
             old_action = action
             if action > 0.5:
@@ -237,10 +243,10 @@ class EnvironmentWrapper():
 
             reward = -1.0 if done else 0.1
             reward -= 0.1 * old_action[0] + 0.05 * old_action[0] ** 2
+        
         elif self.env_type == "gym":
             
             next_state, reward, done,truncated, info = self.env.step(action)
-
             if len(self.observation_space) == 3:
                 next_state = PreprocessAtariStates(next_state)
 

@@ -4,6 +4,11 @@ import sys
 import scipy.io as sio
 import os
 import multiprocessing as mp
+import wandb
+import random
+
+# start a new wandb run to track this script
+
 
 sys.path.append("./mems")
 sys.path.append("./agents")
@@ -21,7 +26,7 @@ def main():
     parser = argparse.ArgumentParser(description = "PyTorch package for RL (by Anji Liu)")
     parser.add_argument("--env-name", type = str, default = "Pendulum-v1",
                         help = "Environment name (default: Pendulum-v1)")
-    parser.add_argument("--agent", type = str, default = "DDPG_TD3_AAC",
+    parser.add_argument("--agent", type = str, default = "DDPG",
                         help = "Name of the agent (default: DDPG_TD3_AAC)")
     parser.add_argument("--mode", type = str, default = "train",
                         help = "Running mode from [train, test] (default: train)")
@@ -29,11 +34,12 @@ def main():
                         help = "Discount factor gamma (default: 0.99)")
     parser.add_argument("--seed", type = int, default = 123,
                         help = "Random seed (default: 123)")
+    parser.add_argument("--K", type = int, default = 32,help="K of network")
     parser.add_argument("--max-buffer-size", type = int, default = 100000,
                         help = "Maximum size of replay memory (default: 100000)")
-    parser.add_argument("--training-batch-size", type = int, default = 64,
+    parser.add_argument("--training-batch-size", type = int, default =32 ,
                         help = "Training batch size (default: 32)")
-    parser.add_argument("--max-training-steps", type = int, default = 10000000,
+    parser.add_argument("--max-training-steps", type = int, default = 70000,
                         help = "Maximum training steps (default: 10000000)")
     parser.add_argument("--max-episode-length", type = int, default = 1000,
                         help = "Maximum length for an episode (default: 1000)")
@@ -43,7 +49,7 @@ def main():
                         help = "Step interval for saving the model (default: 5000)")
     parser.add_argument("--do-not-save", default = False, action = "store_true",
                         help = "Do not save model (default: False)")
-    parser.add_argument("--do-not-load", default = False, action = "store_true",
+    parser.add_argument("--do-not-load", default = True, action = "store_true",
                         help = "Do not load model (default: False)")
     parser.add_argument("--evaluate-interval", type = int, default = 2000,
                         help = "Evaluation interval (default: 20000)")
@@ -107,9 +113,18 @@ def main():
                         help = "Do not post data to mysql server (default: False)")
 
     args = parser.parse_args()
-
     args.code_version = CODE_VERSION
     args.env_extra_dict = {}
+
+    experiment_no=1
+    wandb.init(
+        project="ADAC",
+        name=f"{args.agent}",
+        group=f"{args.env_name}"+str(experiment_no),
+        job_type=f"{args.agent}",
+        # track hyperparameters and run metadata
+        config=vars(args)
+    )
 
     trainer = Trainer(args)
     if args.mode == "train":

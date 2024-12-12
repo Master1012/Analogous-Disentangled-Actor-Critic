@@ -1,0 +1,38 @@
+
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   0%|                                                                      | 1/70000 [00:03<67:08:50,  3.45s/it]E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py:117: UserWarning: Batch size is bigger than buffer size, be careful of over-sampling.
+  warnings.warn("Batch size is bigger than buffer size, be careful of over-sampling.")
+
+
+
+
+
+ER: 2.0000| CR: 0.0000 SR: 0.0000:   1%|▎                                                                      | 355/70000 [00:15<53:16, 21.79it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 244, in train_offPolicy
+    print()
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\lib\redirect.py", line 643, in write
+    cb(data)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\wandb_run.py", line 2259, in <lambda>
+    lambda data: self._console_raw_callback("stdout", data),
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\wandb_run.py", line 371, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\wandb_run.py", line 1500, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\interface\interface.py", line 674, in publish_output_raw
+    self._publish_output_raw(o)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 79, in _publish_output_raw
+    self._publish(rec)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\lib\sock_client.py", line 150, in _send_message
+    header = struct.pack("<BI", ord("W"), raw_size)
+KeyboardInterrupt

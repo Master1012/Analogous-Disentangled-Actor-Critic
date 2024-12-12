@@ -1,0 +1,17 @@
+
+ER: 11.0000| CR: 0.0000 SR: 0.0000:   0%|▏                                                                    | 243/70000 [00:03<10:27, 111.23it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 139, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 129, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 218, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG.py", line 118, in train_step
+    next_Q_values = self.critic_target(
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG.py", line 65, in forward
+    Q_value = self.feature_encoder(torch.cat((state_feature, action_feature), dim = 1))
+KeyboardInterrupt

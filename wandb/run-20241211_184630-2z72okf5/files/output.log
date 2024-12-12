@@ -1,0 +1,24 @@
+
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   0%|                                                                      | 1/70000 [00:04<81:04:29,  4.17s/it]E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py:117: UserWarning: Batch size is bigger than buffer size, be careful of over-sampling.
+  warnings.warn("Batch size is bigger than buffer size, be careful of over-sampling.")
+
+
+
+
+
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   1%|▎                                                                      | 351/70000 [00:16<57:41, 20.12it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 220, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3_AAC.py", line 270, in train_step
+    Q_sa_ij.sum().backward()
+  File "D:\nlp\torchenv\lib\site-packages\torch\_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\autograd\__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -101,9 +101,9 @@ class Agent_DDPG_AAC(Agent):
         self.hard_update(self.critic_target, self.critic)
 
         # Optimizers
-        self.actor_optim_std = optim.Adam(self.actor.parameters(), lr = 1e-3)
+        self.actor_optim_std = optim.Adam(self.actor.parameters(), lr = 1e-4)
         self.actor_optim_ent = optim.Adam(self.actor.parameters(), lr = 1e-4)
-        self.critic_optim = optim.Adam(self.critic.parameters(), lr = 1e-3)
+        self.critic_optim = optim.Adam(self.critic.parameters(), lr = 1e-4)
 
         # Memory
         self.memory = StepMemory(args.max_buffer_size, device = device)
@@ -121,7 +121,7 @@ class Agent_DDPG_AAC(Agent):
         self.balance_temperature_n = 15000000
 
         # Other parameters
-        self.K = 16
+        self.K = args.K
         self.sigma = min(math.sqrt(self.action_params["dims"]) / self.K, 0.1)
 
         # Loss function
@@ -165,6 +165,7 @@ class Agent_DDPG_AAC(Agent):
 
         # Critic update
         self.critic_optim.zero_grad()
+
 
         Q_batch = self.critic(state_batch, action_batch)
         value_loss = self.mseLoss(Q_batch, target_Q_batch)
@@ -210,6 +211,7 @@ class Agent_DDPG_AAC(Agent):
 
             dQ_da = ent_action_batch_with_grad.grad
 
+
             # Term 1 contains the generalized gradient
             term1 = (K_ij.view(self.K, self.K, self.training_batch_size, 1) *
                      dQ_da.view(1, self.K, self.training_batch_size, -1)).sum(dim = 1).view(
@@ -217,6 +219,8 @@ class Agent_DDPG_AAC(Agent):
 
             # Term 2 refers to the maximum entropy term
             term2 = K_ij_grad.sum(dim = 1).view(self.K * self.training_batch_size, -1)
+
+
 
             # Update policy (Ent)
             self.actor_optim_ent.zero_grad()

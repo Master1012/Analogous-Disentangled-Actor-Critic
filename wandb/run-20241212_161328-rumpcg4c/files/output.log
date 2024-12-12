@@ -1,0 +1,79 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   3%|█▊                                                            | 2027/70000 [00:54<42:29, 26.67it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 16.0000| CR: 0.0000 SR: 0.0000:   6%|███▌                                                         | 4053/70000 [01:52<23:29, 46.79it/s]
+
+
+
+
+
+
+
+
+
+ER: 22.0000| CR: 0.0000 SR: 0.0000:   7%|████▎                                                        | 4995/70000 [02:10<19:47, 54.74it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 131, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 177, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 240, in train_offPolicy
+    self.agent.save(self.save_path)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3.py", line 463, in save
+AttributeError: 'Agent_DDPG_TD3' object has no attribute 'world_model'

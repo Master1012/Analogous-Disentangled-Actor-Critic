@@ -1,0 +1,25 @@
+
+ER: 0.0| CR: 0.0 SR: 0.0:   0%|                                                                                          | 0/70000 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 193, in train_offPolicy
+    action = self.agent.action(state, mode = "train")
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3_AAC.py", line 301, in action
+    self.actor(self.to_tensor(state).unsqueeze(0), mode = "Ent").squeeze(0) +
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3_AAC.py", line 47, in forward
+    state_feature = self.state_encoder(state)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\networks\FCNet.py", line 83, in forward
+    x = unit(x)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

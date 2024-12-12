@@ -113,7 +113,9 @@ class Memory():
     def sample_random_idxs(self, batch_size, sample_recent = None):
         if self.buffer_size == 0:
             return None
+        
         elif batch_size > self.buffer_size:
+            # print(batch_size, self.buffer_size)
             warnings.warn("Batch size is bigger than buffer size, be careful of over-sampling.")
 
             batch_idxs = np.random.random_integers(0, self.buffer_size - 1, size = batch_size)

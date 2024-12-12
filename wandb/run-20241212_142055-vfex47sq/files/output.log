@@ -1,0 +1,28 @@
+
+ER: 0.0| CR: 0.0 SR: 0.0:   0%|                                                                            | 1/70000 [00:05<109:59:45,  5.66s/it]E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py:119: UserWarning: Batch size is bigger than buffer size, be careful of over-sampling.
+  warnings.warn("Batch size is bigger than buffer size, be careful of over-sampling.")
+
+
+
+
+
+
+
+
+
+
+
+ER: 2.0000| CR: 0.0000 SR: 0.0000:   1%|▋                                                                    | 693/70000 [00:31<46:15, 24.97it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 170, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 228, in train_offPolicy
+    self.agent.bias_calculation()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3_AAC.py", line 179, in bias_calculation
+    data = np.load("Logs/" + self.args.env_name + "_.npz")
+  File "D:\nlp\torchenv\lib\site-packages\numpy\lib\npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+KeyboardInterrupt

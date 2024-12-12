@@ -1,0 +1,40 @@
+
+ER: 0.0| CR: 0.0 SR: 0.0:   0%|                                                                                          | 0/70000 [00:00<?, ?it/s]
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   0%|                                                                      | 1/70000 [00:02<58:06:16,  2.99s/it]E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py:117: UserWarning: Batch size is bigger than buffer size, be careful of over-sampling.
+  warnings.warn("Batch size is bigger than buffer size, be careful of over-sampling.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   1%|▉                                                                      | 959/70000 [00:41<49:16, 23.35it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 223, in train_offPolicy
+    self.agent.bias_calculation()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3_AAC.py", line 157, in bias_calculation
+    next_state_batch, done_batch = self.memory.sample(batch_size)
+  File "E:\Analogous-Disentangled-Actor-Critic\mems\StepMemory.py", line 109, in sample
+    batch = super(StepMemory, self).sample(batch_size, to_tensor)
+  File "E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py", line 89, in sample
+    batch[item_name].append(deepcopy(self.buffers[item_name][batch_idx]))
+  File "D:\nlp\torchenv\lib\copy.py", line 177, in deepcopy
+    _keep_alive(x, memo) # Make sure x lives at least as long as d
+KeyboardInterrupt

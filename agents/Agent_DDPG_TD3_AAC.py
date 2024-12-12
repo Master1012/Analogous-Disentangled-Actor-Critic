@@ -8,7 +8,7 @@ import math
 
 from agents.Agent import Agent
 from networks.FCNet import FCNet
-
+import sys
 from mems.StepMemory import StepMemory
 
 
@@ -92,12 +92,13 @@ class Agent_DDPG_TD3_AAC(Agent):
                                              action_params, args, device)
 
         # Networks
-        self.actor = Actor(state_shape, action_params["dims"], action_params["range"])
+        self.actor = Actor(state_shape, action_params["dims"], action_params["range"])#behavior policy(mu)
         self.actor_target = Actor(state_shape, action_params["dims"], action_params["range"])
         self.critic1 = Critic(state_shape, action_params["dims"])
         self.critic1_target = Critic(state_shape, action_params["dims"])
         self.critic2 = Critic(state_shape, action_params["dims"])
         self.critic2_target = Critic(state_shape, action_params["dims"])
+
 
         self.hard_update(self.actor_target, self.actor)
         self.hard_update(self.critic1_target, self.critic1)
@@ -117,7 +118,6 @@ class Agent_DDPG_TD3_AAC(Agent):
         self.action_range = action_params["range"]
         self.tau = tau
         self.epsilon = 0.1
-
         # Balance_temperature
         self.start_balance_temperature = 2.0
         self.end_balance_temperature = 1.0
@@ -125,7 +125,7 @@ class Agent_DDPG_TD3_AAC(Agent):
         self.balance_temperature_n = 15000000
 
         # Other parameters
-        self.K = 8
+        self.K = args.K
         self.sigma = min(math.sqrt(self.action_params["dims"]) / self.K, 0.1)
 
         # Loss function
@@ -190,13 +190,16 @@ class Agent_DDPG_TD3_AAC(Agent):
              bias = data_bias, variance = data_variance)
 
     def train_step(self):
+        #sample minibatch of M samples
         state_batch, action_batch, reward_batch, \
             next_state_batch, done_batch = self.memory.sample(self.training_batch_size)
+
 
         # Add perturbation to next_action_batch
         next_action_batch = self.actor_target(next_state_batch) + \
             self.normal_like(action_batch, mean = 0.0, std = self.epsilon).clamp(min = -0.5, max = 0.5)
         next_action_batch = next_action_batch.clamp(min = self.action_range[0], max = self.action_range[1])
+
 
         # Prepare critic target
         with torch.no_grad():
@@ -233,8 +236,11 @@ class Agent_DDPG_TD3_AAC(Agent):
 
         self.critic2_optim.step()
 
+
+
         if self.train_step_count % self.actor_update_interval == 0:
             # Actor update (Std)
+            #update target policy
             self.actor_optim_std.zero_grad()
 
             policy_loss = -self.critic1(
@@ -246,6 +252,7 @@ class Agent_DDPG_TD3_AAC(Agent):
             self.actor_optim_std.step()
 
             # Actor update (Ent)
+            #calculate term 1 and term 2
             enlarged_state_batch = state_batch.view(1, self.training_batch_size, -1).repeat(
                 self.K, 1, 1).view(self.K * self.training_batch_size, -1)
             ent_action_batch = self.actor(enlarged_state_batch, mode = "Ent")
@@ -280,11 +287,11 @@ class Agent_DDPG_TD3_AAC(Agent):
             term2 = K_ij_grad.sum(dim = 1).view(self.K * self.training_batch_size, -1)
 
             # Update policy (Ent)
+            #update behavior policy
             self.actor_optim_ent.zero_grad()
 
             ent_action_batch.backward(-(term1 + self.balance_temperature * term2).detach() /
                                       self.K / self.training_batch_size / (self.balance_temperature + 1))
-
             self.actor_optim_ent.step()
 
             # Target network update
@@ -297,7 +304,6 @@ class Agent_DDPG_TD3_AAC(Agent):
 
     def action(self, state, mode = "train"):
         if mode == "train":
-            print("state",state)
             action = self.to_numpy(
                 self.actor(self.to_tensor(state).unsqueeze(0), mode = "Ent").squeeze(0) +
                 self.normal([self.action_params["dims"]], mean = 0.0, std = self.sigma)

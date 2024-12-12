@@ -14,6 +14,9 @@ from datetime import datetime
 import pytz
 
 from envs.EnvironmentWrapper import EnvironmentWrapper
+import wandb
+import sys
+from tqdm import tqdm
 # from envs.MultipleEnvWrapper import MultipleEnvWrapper
 # from envs.MultipleEnvWrapperProc import MultipleEnvWrapperProc
 # from envs.AutoTestingMultipleEnv import AutoTestingMultipleEnv
@@ -31,11 +34,12 @@ from utils.LogSaver import LogSaver
 # from MCTS.ParallelMCTSEvaluator import ParallelMCTSEvaluator
 
 from agents.Agent_DDPG import Agent_DDPG
+from agents.Agent_DDPG_AAC import Agent_DDPG_AAC
 from agents.Agent_DDPG_TD3_AAC import Agent_DDPG_TD3_AAC
 from agents.Agent_DDPG_TD3_AAC_VIME import Agent_DDPG_TD3_AAC_VIME
 from agents.Agent_DDPG_TD3_VIME import Agent_DDPG_TD3_VIME
+from agents.Agent_DDPG_TD3 import Agent_DDPG_TD3
 from agents.Agent_DDPG_TD3_AAC_bias_analysis import Agent_DDPG_TD3_AAC_bias_analysis
-
 
 class Trainer():
     def __init__(self, args):
@@ -69,7 +73,7 @@ class Trainer():
             self.action_params["dims"] = self.env.action_dim
             self.action_params["range"] = self.env.action_range
 
-        # Initialize agent
+        # Initialize agent(initialize networks)
         if args.agent == "DDPG":
             if args.env_name == "HappyElimination":
                 self.agent = Agent_DDPGHappyElimOnly(self.state_shape, self.action_type,
@@ -79,6 +83,15 @@ class Trainer():
                 self.agent = Agent_DDPG(self.state_shape, self.action_type,
                                     self.action_params, args,
                                     device = self.device)
+        elif args.agent == "DDPG_AAC":
+            self.agent = Agent_DDPG_AAC(self.state_shape, self.action_type,
+                                        self.action_params, args,
+                                        device = self.device)
+        elif args.agent == "DDPG_TD3":
+            self.agent = Agent_DDPG_TD3(self.state_shape, self.action_type,
+                                        self.action_params, args,
+                                        device = self.device)
+
         elif args.agent == "DDPG_TD3_VIME":
             self.agent = Agent_DDPG_TD3_VIME(self.state_shape, self.action_type,
                                              self.action_params, args,
@@ -95,6 +108,8 @@ class Trainer():
             self.agent = Agent_DDPG_TD3_AAC_bias_analysis(self.state_shape,
                     self.action_type, self.action_params, args, device
                     = self.device)
+        elif args.agent == "PPO":
+            pass
         else:
             raise NotImplementedError()
 
@@ -179,32 +194,35 @@ class Trainer():
 
         correct_episode_reward = 0.0
         support_episode_reward = 0.0
-
+        tqdm_bar = tqdm(total = self.args.max_training_steps,desc="ER: 0.0| CR: 0.0 SR: 0.0")
         while step < self.args.max_training_steps:
+
             # Reset if it is the start of episode
             if state is None:
-                state,info = deepcopy(self.env.reset())
+                state = deepcopy(self.env.reset())
                 self.agent.reset()
 
-            # Select action
+            # Select action from mu(behaviour policy)
             action = self.agent.action(state, mode = "train")
 
-            # Interact with environment
+            # Interact with environment(algo line 9)
             next_state, reward, done,info = self.env.step(action)
             next_state = deepcopy(next_state)
-
-            # For intrinsic reward
+            
+            # For intrinsic reward(algo line 9)
             if hasattr(self.agent, "get_augmented_reward_dyna_based"):
                 if hasattr(self.agent, "observe_separate_reward") and self.agent.observe_separate_reward:
                     intrinsic_reward = self.agent.get_augmented_reward_dyna_based(state, action, next_state)
                 else:
                     reward += self.agent.get_augmented_reward_dyna_based(state, action, next_state)
+                
 
             # Manually terminate episode if needed
             if self.args.max_episode_length > 0 and episode_step >= self.args.max_episode_length - 1:
                 done = True
 
             # Agent observe environment change
+            #add (st, at,rt,rint,st+1) to replay buffer B
             if hasattr(self.agent, "observe_separate_reward") and self.agent.observe_separate_reward:
                 self.agent.observe(state, action, reward, intrinsic_reward, done)
             else:
@@ -228,7 +246,7 @@ class Trainer():
                     self.args.evaluate_interval - 1:
                 aveg_reward, _ = self.evaluate()
                 prYellow("[Evaluate] #{}: Average episode reward: {}".format(step + 1, aveg_reward))
-
+                wandb.log({"Average episode reward": aveg_reward,'steps':step})
                 end_time = time.time()
                 if self.args.max_training_hours != 0 and end_time - start_time > self.args.max_training_hours * 3600:
                     return
@@ -244,13 +262,15 @@ class Trainer():
                 correct_episode_reward += info["correct_reward"]
                 support_episode_reward += info["support_reward"]
             state = next_state
-
+            tqdm_bar.update(1)
             # Reset if end of an episode
             if done:
-                prGreen("#{}: Episode reward: {} steps: {} | correct reward: {} support reward: {}"\
-                        .format(episode + 1, episode_reward, step, correct_episode_reward, support_episode_reward))
-
-                # Reset indicators
+                wandb.log({"Episode reward": episode_reward, "steps": step, "correct reward": correct_episode_reward, "support reward": support_episode_reward})
+                tqdm_bar.set_description("ER: {:.4f}| CR: {:.4f} SR: {:.4f}".format(episode_reward, correct_episode_reward, support_episode_reward))
+            
+                # prGreen("#{}: Episode reward: {} steps: {} | correct reward: {} support reward: {}"\
+                #         .format(episode + 1, episode_reward, step, correct_episode_reward, support_episode_reward))
+                #                 # Reset indicators
                 state = None
                 episode += 1
                 episode_step = 0
@@ -687,7 +707,7 @@ class Trainer():
         results = []
         for episode in range(self.args.evaluate_num_episodes):
             # Reset environment
-            state,info = deepcopy(self.env_for_eval.reset(info = info))
+            state = deepcopy(self.env_for_eval.reset(info = info))
             episode_step = 0
             episode_reward = 0.0
 

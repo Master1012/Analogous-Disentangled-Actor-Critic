@@ -1,0 +1,185 @@
+
+[-3.0, 3.0]
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   0%|                                                                      | 1/70000 [00:02<49:42:47,  2.56s/it]E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py:119: UserWarning: Batch size is bigger than buffer size, be careful of over-sampling.
+  warnings.warn("Batch size is bigger than buffer size, be careful of over-sampling.")
+ER: 6.0000| CR: 0.0000 SR: 0.0000:   0%|                                                                        | 64/70000 [00:04<27:28, 42.42it/s]
+128 1
+128 2
+128 3
+128 4
+128 5
+128 6
+128 7
+128 8
+128 9
+128 10
+128 11
+128 12
+128 13
+128 14
+128 15
+128 16
+128 17
+128 18
+128 19
+128 20
+128 21
+128 22
+128 23
+128 24
+128 25
+128 26
+128 27
+128 28
+128 29
+128 30
+128 31
+128 32
+128 33
+128 34
+128 35
+128 36
+128 37
+128 38
+128 39
+128 40
+128 41
+128 42
+128 43
+128 44
+128 45
+128 46
+128 47
+128 48
+128 49
+128 50
+128 51
+128 52
+128 53
+128 54
+128 55
+128 56
+128 57
+128 58
+128 59
+128 60
+128 61
+128 62
+128 63
+128 64
+128 65
+128 66
+128 67
+128 68
+128 69
+128 70
+128 71
+128 72
+128 73
+128 74
+128 75
+128 76
+128 77
+128 78
+128 79
+128 80
+128 81
+128 82
+128 83
+128 84
+128 85
+128 86
+128 87
+128 88
+128 89
+128 90
+128 91
+128 92
+128 93
+128 94
+128 95
+128 96
+128 97
+128 98
+128 99
+128 100
+128 101
+128 102
+128 103
+128 104
+128 105
+128 106
+128 107
+128 108
+128 109
+128 110
+128 111
+128 112
+128 113
+128 114
+128 115
+128 116
+128 117
+128 118
+128 119
+128 120
+128 121
+128 122
+128 123
+128 124
+128 125
+128 126
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 1.0000| CR: 0.0000 SR: 0.0000:   3%|█▉                                                                    | 1919/70000 [01:21<48:10, 23.55it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 220, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_TD3_AAC.py", line 194, in train_step
+    next_state_batch, done_batch = self.memory.sample(self.training_batch_size)
+  File "E:\Analogous-Disentangled-Actor-Critic\mems\StepMemory.py", line 109, in sample
+    batch = super(StepMemory, self).sample(batch_size, to_tensor)
+  File "E:\Analogous-Disentangled-Actor-Critic\mems\Memory.py", line 103, in sample
+    batch[item_name] = torch.tensor(batch[item_name], dtype = torch.float32).to(self.device)
+KeyboardInterrupt

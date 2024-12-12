@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 20.0000| CR: 0.0000 SR: 0.0000:   3%|█▌                                                     | 1998/70000 [01:31<58:41, 19.31it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 166, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 234, in train_offPolicy
+    aveg_reward, _ = self.evaluate()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 696, in evaluate
+    state,info = deepcopy(self.env_for_eval.reset(info = info))
+ValueError: too many values to unpack (expected 2)

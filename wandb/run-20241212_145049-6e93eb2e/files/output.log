@@ -1,0 +1,104 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   3%|██                                                                  | 2098/70000 [00:28<18:13, 62.10it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   6%|███▉                                                                | 4095/70000 [00:54<18:11, 60.36it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   9%|█████▊                                                              | 5998/70000 [01:20<13:53, 76.83it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:  12%|███████▉                                                            | 8145/70000 [01:50<13:41, 75.31it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 4.0000| CR: 0.0000 SR: 0.0000:  14%|█████████▋                                                         | 10119/70000 [02:17<13:28, 74.11it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 8.0000| CR: 0.0000 SR: 0.0000:  17%|███████████▍                                                       | 11995/70000 [02:42<12:47, 75.56it/s]
+
+
+ER: 7.0000| CR: 0.0000 SR: 0.0000:  18%|███████████▊                                                       | 12403/70000 [02:48<12:27, 77.03it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 171, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 226, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG.py", line 147, in train_step
+    self.soft_update(self.actor_target, self.actor, self.tau)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent.py", line 60, in soft_update
+    target_param.data.copy_(
+KeyboardInterrupt
