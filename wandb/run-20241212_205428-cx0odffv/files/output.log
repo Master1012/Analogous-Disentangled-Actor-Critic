@@ -1,0 +1,14 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 129, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 116, in __init__
+    sac=SAC(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 51, in __init__
+    self.actor_critic.to(device)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 927, in to
+    return self._apply(convert)
+AttributeError: 'str' object has no attribute '_apply'

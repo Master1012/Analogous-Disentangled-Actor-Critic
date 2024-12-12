@@ -1,0 +1,199 @@
+2024-12-12 21:23:40,167 INFO    StreamThr :10556 [internal.py:wandb_internal():86] W&B internal server running at pid: 10556, started at: 2024-12-12 21:23:40.167277
+2024-12-12 21:23:40,168 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: status
+2024-12-12 21:23:40,172 INFO    WriterThread:10556 [datastore.py:open_for_write():87] open: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\run-2wsol4sj.wandb
+2024-12-12 21:23:40,172 DEBUG   SenderThread:10556 [sender.py:send():379] send: header
+2024-12-12 21:23:40,209 DEBUG   SenderThread:10556 [sender.py:send():379] send: run
+2024-12-12 21:23:41,186 INFO    SenderThread:10556 [dir_watcher.py:__init__():211] watching files in: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files
+2024-12-12 21:23:41,187 INFO    SenderThread:10556 [sender.py:_start_run_threads():1124] run started: 2wsol4sj with start time 1734018820.168794
+2024-12-12 21:23:41,195 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: check_version
+2024-12-12 21:23:41,196 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: check_version
+2024-12-12 21:23:41,563 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: run_start
+2024-12-12 21:23:41,592 DEBUG   HandlerThread:10556 [system_info.py:__init__():26] System info init
+2024-12-12 21:23:41,592 DEBUG   HandlerThread:10556 [system_info.py:__init__():41] System info init done
+2024-12-12 21:23:41,592 INFO    HandlerThread:10556 [system_monitor.py:start():194] Starting system monitor
+2024-12-12 21:23:41,592 INFO    SystemMonitor:10556 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-12-12 21:23:41,592 INFO    HandlerThread:10556 [system_monitor.py:probe():214] Collecting system info
+2024-12-12 21:23:41,600 INFO    SystemMonitor:10556 [interfaces.py:start():190] Started cpu monitoring
+2024-12-12 21:23:41,601 INFO    SystemMonitor:10556 [interfaces.py:start():190] Started disk monitoring
+2024-12-12 21:23:41,602 INFO    SystemMonitor:10556 [interfaces.py:start():190] Started gpu monitoring
+2024-12-12 21:23:41,614 INFO    SystemMonitor:10556 [interfaces.py:start():190] Started memory monitoring
+2024-12-12 21:23:41,623 INFO    SystemMonitor:10556 [interfaces.py:start():190] Started network monitoring
+2024-12-12 21:23:41,637 DEBUG   HandlerThread:10556 [system_info.py:probe():150] Probing system
+2024-12-12 21:23:41,638 DEBUG   HandlerThread:10556 [system_info.py:_probe_git():135] Probing git
+2024-12-12 21:23:41,721 DEBUG   HandlerThread:10556 [system_info.py:_probe_git():143] Probing git done
+2024-12-12 21:23:41,721 DEBUG   HandlerThread:10556 [system_info.py:probe():198] Probing system done
+2024-12-12 21:23:41,721 DEBUG   HandlerThread:10556 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.10.13', 'heartbeatAt': '2024-12-12T15:53:41.637689', 'startedAt': '2024-12-12T15:53:40.156744', 'docker': None, 'cuda': None, 'args': ('--env-name', 'InvertedPendulum-v4', '--agent', 'SAC'), 'state': 'running', 'program': 'E:\\Analogous-Disentangled-Actor-Critic\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/Master1012/Analogous-Disentangled-Actor-Critic.git', 'commit': '7b1ddecaff2e1bc1f1081752758f60998b7c4712'}, 'email': '96904882+Shadowking912@users.noreply.github.com', 'root': 'E:/Analogous-Disentangled-Actor-Critic', 'host': 'Legion912', 'username': 'gupta', 'executable': 'D:\\nlp\\torchenv\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3201.0, 'min': 0.0, 'max': 3201.0}, 'cpu_freq_per_core': [{'current': 3201.0, 'min': 0.0, 'max': 3201.0}], 'disk': {'/': {'total': 465.74511337280273, 'used': 336.31465911865234}}, 'gpu': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 13.855525970458984}}
+2024-12-12 21:23:41,722 INFO    HandlerThread:10556 [system_monitor.py:probe():224] Finished collecting system info
+2024-12-12 21:23:41,722 INFO    HandlerThread:10556 [system_monitor.py:probe():227] Publishing system info
+2024-12-12 21:23:41,722 DEBUG   HandlerThread:10556 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-12-12 21:23:41,728 ERROR   HandlerThread:10556 [system_info.py:_save_conda():221] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 214, in _save_conda
+    subprocess.call(
+  File "D:\nlp\torchenv\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "D:\nlp\torchenv\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2024-12-12 21:23:41,729 DEBUG   HandlerThread:10556 [system_info.py:_save_conda():222] Saving conda packages done
+2024-12-12 21:23:41,730 INFO    HandlerThread:10556 [system_monitor.py:probe():229] Finished publishing system info
+2024-12-12 21:23:41,742 DEBUG   SenderThread:10556 [sender.py:send():379] send: files
+2024-12-12 21:23:41,743 INFO    SenderThread:10556 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-12-12 21:23:42,019 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: python_packages
+2024-12-12 21:23:42,019 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: python_packages
+2024-12-12 21:23:42,020 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: stop_status
+2024-12-12 21:23:42,020 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: stop_status
+2024-12-12 21:23:42,022 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: internal_messages
+2024-12-12 21:23:42,199 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\wandb-metadata.json
+2024-12-12 21:23:42,199 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\conda-environment.yaml
+2024-12-12 21:23:42,201 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\requirements.txt
+2024-12-12 21:23:42,657 DEBUG   SenderThread:10556 [sender.py:send():379] send: telemetry
+2024-12-12 21:23:43,086 INFO    wandb-upload_0:10556 [upload_job.py:push():131] Uploaded file C:\Users\gupta\AppData\Local\Temp\tmped8f1vacwandb\w911lg1l-wandb-metadata.json
+2024-12-12 21:23:43,207 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\output.log
+2024-12-12 21:23:43,924 DEBUG   SenderThread:10556 [sender.py:send():379] send: exit
+2024-12-12 21:23:43,924 INFO    SenderThread:10556 [sender.py:send_exit():586] handling exit code: 1
+2024-12-12 21:23:43,924 INFO    SenderThread:10556 [sender.py:send_exit():588] handling runtime: 2
+2024-12-12 21:23:43,926 INFO    SenderThread:10556 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-12-12 21:23:43,926 INFO    SenderThread:10556 [sender.py:send_exit():594] send defer
+2024-12-12 21:23:43,927 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:43,927 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 0
+2024-12-12 21:23:43,927 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:43,927 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-12-12 21:23:43,927 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 1
+2024-12-12 21:23:43,927 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:43,927 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 1
+2024-12-12 21:23:43,927 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:43,927 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-12-12 21:23:43,927 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 2
+2024-12-12 21:23:43,929 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:43,929 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 2
+2024-12-12 21:23:43,929 INFO    HandlerThread:10556 [system_monitor.py:finish():203] Stopping system monitor
+2024-12-12 21:23:43,929 DEBUG   SystemMonitor:10556 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-12-12 21:23:43,929 INFO    HandlerThread:10556 [interfaces.py:finish():202] Joined cpu monitor
+2024-12-12 21:23:43,938 DEBUG   SystemMonitor:10556 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-12-12 21:23:43,938 INFO    HandlerThread:10556 [interfaces.py:finish():202] Joined disk monitor
+2024-12-12 21:23:43,938 DEBUG   SystemMonitor:10556 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-12-12 21:23:44,026 INFO    HandlerThread:10556 [interfaces.py:finish():202] Joined gpu monitor
+2024-12-12 21:23:44,026 INFO    HandlerThread:10556 [interfaces.py:finish():202] Joined memory monitor
+2024-12-12 21:23:44,027 INFO    HandlerThread:10556 [interfaces.py:finish():202] Joined network monitor
+2024-12-12 21:23:44,027 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:44,027 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-12-12 21:23:44,028 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 3
+2024-12-12 21:23:44,028 DEBUG   SenderThread:10556 [sender.py:send():379] send: stats
+2024-12-12 21:23:44,028 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:44,028 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 3
+2024-12-12 21:23:44,028 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:44,029 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-12-12 21:23:44,029 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 4
+2024-12-12 21:23:44,029 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:44,029 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 4
+2024-12-12 21:23:44,029 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:44,029 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-12-12 21:23:44,029 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 5
+2024-12-12 21:23:44,029 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:44,029 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 5
+2024-12-12 21:23:44,030 DEBUG   SenderThread:10556 [sender.py:send():379] send: summary
+2024-12-12 21:23:44,030 INFO    SenderThread:10556 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-12-12 21:23:44,032 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:44,032 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-12-12 21:23:44,032 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 6
+2024-12-12 21:23:44,032 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:44,032 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 6
+2024-12-12 21:23:44,032 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:44,032 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-12-12 21:23:44,036 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: status_report
+2024-12-12 21:23:44,217 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\wandb-summary.json
+2024-12-12 21:23:44,368 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 7
+2024-12-12 21:23:44,368 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:44,368 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 7
+2024-12-12 21:23:44,368 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:44,368 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-12-12 21:23:44,931 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-12 21:23:45,228 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\config.yaml
+2024-12-12 21:23:45,229 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\output.log
+2024-12-12 21:23:46,671 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 8
+2024-12-12 21:23:46,672 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: poll_exit
+2024-12-12 21:23:46,672 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:46,672 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 8
+2024-12-12 21:23:46,673 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:46,673 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-12-12 21:23:46,673 INFO    SenderThread:10556 [job_builder.py:build():318] Attempting to build job artifact
+2024-12-12 21:23:46,674 INFO    SenderThread:10556 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-12-12 21:23:46,729 INFO    SenderThread:10556 [job_builder.py:build():431] adding wandb-job metadata file
+2024-12-12 21:23:46,734 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 9
+2024-12-12 21:23:46,735 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:46,735 DEBUG   SenderThread:10556 [sender.py:send():379] send: artifact
+2024-12-12 21:23:46,735 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 9
+2024-12-12 21:23:46,949 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-12 21:23:47,244 INFO    Thread-16 :10556 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\output.log
+2024-12-12 21:23:48,223 INFO    SenderThread:10556 [sender.py:send_artifact():1468] sent artifact job-https___github.com_Master1012_Analogous-Disentangled-Actor-Critic.git_main.py - {'id': 'QXJ0aWZhY3Q6MTM2ODY0NjY0Mw==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUwMjY5NzY3MQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTM2ODY0NjY0Mw==', 'versionIndex': 5}}}
+2024-12-12 21:23:48,223 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:48,223 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-12-12 21:23:48,223 INFO    SenderThread:10556 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-12-12 21:23:48,254 INFO    SenderThread:10556 [dir_watcher.py:finish():388] scan: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files
+2024-12-12 21:23:48,254 INFO    SenderThread:10556 [dir_watcher.py:finish():402] scan save: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\conda-environment.yaml conda-environment.yaml
+2024-12-12 21:23:48,254 INFO    SenderThread:10556 [dir_watcher.py:finish():402] scan save: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\config.yaml config.yaml
+2024-12-12 21:23:48,254 INFO    SenderThread:10556 [dir_watcher.py:finish():402] scan save: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\output.log output.log
+2024-12-12 21:23:48,257 INFO    SenderThread:10556 [dir_watcher.py:finish():402] scan save: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\requirements.txt requirements.txt
+2024-12-12 21:23:48,259 INFO    SenderThread:10556 [dir_watcher.py:finish():402] scan save: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\wandb-metadata.json wandb-metadata.json
+2024-12-12 21:23:48,259 INFO    SenderThread:10556 [dir_watcher.py:finish():402] scan save: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\wandb-summary.json wandb-summary.json
+2024-12-12 21:23:48,262 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 10
+2024-12-12 21:23:48,262 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: poll_exit
+2024-12-12 21:23:48,263 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:48,263 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 10
+2024-12-12 21:23:48,265 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:48,265 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-12-12 21:23:48,265 INFO    SenderThread:10556 [file_pusher.py:finish():172] shutting down file pusher
+2024-12-12 21:23:48,959 INFO    wandb-upload_0:10556 [upload_job.py:push():131] Uploaded file E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\config.yaml
+2024-12-12 21:23:48,966 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-12 21:23:48,966 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: poll_exit
+2024-12-12 21:23:49,302 INFO    wandb-upload_1:10556 [upload_job.py:push():131] Uploaded file E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\output.log
+2024-12-12 21:23:49,648 INFO    wandb-upload_3:10556 [upload_job.py:push():131] Uploaded file E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\wandb-summary.json
+2024-12-12 21:23:49,676 INFO    wandb-upload_2:10556 [upload_job.py:push():131] Uploaded file E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\files\requirements.txt
+2024-12-12 21:23:49,879 INFO    Thread-15 (_thread_body):10556 [sender.py:transition_state():614] send defer: 11
+2024-12-12 21:23:49,879 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:49,879 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 11
+2024-12-12 21:23:49,879 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:49,880 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-12-12 21:23:49,880 INFO    SenderThread:10556 [file_pusher.py:join():178] waiting for file pusher
+2024-12-12 21:23:49,880 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 12
+2024-12-12 21:23:49,880 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:49,880 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 12
+2024-12-12 21:23:49,881 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:49,881 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-12-12 21:23:49,881 INFO    SenderThread:10556 [file_stream.py:finish():614] file stream finish called
+2024-12-12 21:23:49,973 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-12 21:23:50,184 INFO    SenderThread:10556 [file_stream.py:finish():618] file stream finish is done
+2024-12-12 21:23:50,186 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 13
+2024-12-12 21:23:50,186 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: poll_exit
+2024-12-12 21:23:50,186 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:50,186 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 13
+2024-12-12 21:23:50,186 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:50,187 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-12-12 21:23:50,187 INFO    SenderThread:10556 [sender.py:transition_state():614] send defer: 14
+2024-12-12 21:23:50,187 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: defer
+2024-12-12 21:23:50,187 DEBUG   SenderThread:10556 [sender.py:send():379] send: final
+2024-12-12 21:23:50,187 INFO    HandlerThread:10556 [handler.py:handle_request_defer():172] handle defer: 14
+2024-12-12 21:23:50,187 DEBUG   SenderThread:10556 [sender.py:send():379] send: footer
+2024-12-12 21:23:50,187 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: defer
+2024-12-12 21:23:50,187 INFO    SenderThread:10556 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-12-12 21:23:50,187 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-12 21:23:50,188 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-12 21:23:50,188 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: server_info
+2024-12-12 21:23:50,188 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: poll_exit
+2024-12-12 21:23:50,188 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: get_summary
+2024-12-12 21:23:50,190 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: poll_exit
+2024-12-12 21:23:50,190 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: sampled_history
+2024-12-12 21:23:50,190 DEBUG   SenderThread:10556 [sender.py:send_request():406] send_request: server_info
+2024-12-12 21:23:50,190 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: internal_messages
+2024-12-12 21:23:50,487 INFO    MainThread:10556 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-12-12 21:23:50,487 INFO    MainThread:10556 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-12-12 21:23:50,488 INFO    MainThread:10556 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-12-12 21:23:50,489 DEBUG   HandlerThread:10556 [handler.py:handle_request():146] handle_request: shutdown
+2024-12-12 21:23:50,489 INFO    HandlerThread:10556 [handler.py:finish():866] shutting down handler
+2024-12-12 21:23:51,190 INFO    WriterThread:10556 [datastore.py:close():296] close: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241212_212340-2wsol4sj\run-2wsol4sj.wandb
+2024-12-12 21:23:51,501 INFO    SenderThread:10556 [sender.py:finish():1546] shutting down sender
+2024-12-12 21:23:51,502 INFO    SenderThread:10556 [file_pusher.py:finish():172] shutting down file pusher
+2024-12-12 21:23:51,502 INFO    SenderThread:10556 [file_pusher.py:join():178] waiting for file pusher

@@ -1,0 +1,119 @@
+Warning: Log dir E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0 already exists! Storing info there anyway.
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0\progress.txt
+[36mSaving config:
+{
+    "exp_name":	"InvertedPendulum-v4",
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001732D4C2290>":	{
+            "epoch_dict":	{},
+            "exp_name":	"InvertedPendulum-v4",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\InvertedPendulum-v4\\\\InvertedPendulum-v4_s0\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "self":	{
+        "<agents.sac.SAC object at 0x00000173258C3AF0>":	{
+            "ac_kwargs":	{},
+            "actor_critic":	"MLPActorCritic",
+            "alpha":	0.2,
+            "batch_size":	100,
+            "device":	"cuda",
+            "env_fn":	"<function SAC.__init__.<locals>.<lambda> at 0x0000017326B0CCA0>",
+            "epochs":	100,
+            "gamma":	0.99,
+            "logger_kwargs":	{
+                "exp_name":	"InvertedPendulum-v4",
+                "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0"
+            },
+            "lr":	0.001,
+            "max_ep_len":	1000,
+            "num_test_episodes":	10,
+            "polyak":	0.995,
+            "replay_size":	1000000,
+            "save_freq":	1,
+            "seed":	0,
+            "start_steps":	10000,
+            "steps_per_epoch":	4000,
+            "update_after":	1000,
+            "update_every":	50
+        }
+    }
+}
+[32mNumber of parameters: 	 pi: 67586, 	 q1: 67585, 	 q2: 67585
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |            6.13 |
+|          StdEpRet |            3.53 |
+|          MaxEpRet |              27 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            48.9 |
+|      StdTestEpRet |            2.81 |
+|      MaxTestEpRet |              54 |
+|      MinTestEpRet |              46 |
+|             EpLen |            6.13 |
+|         TestEpLen |            48.9 |
+| TotalEnvInteracts |           4e+03 |
+|     AverageQ1Vals |            6.44 |
+|         StdQ1Vals |            4.47 |
+|         MaxQ1Vals |            17.1 |
+|         MinQ1Vals |           -2.96 |
+|     AverageQ2Vals |            6.44 |
+|         StdQ2Vals |            4.48 |
+|         MaxQ2Vals |            17.2 |
+|         MinQ2Vals |           -2.83 |
+|      AverageLogPi |           0.212 |
+|          StdLogPi |            1.21 |
+|          MaxLogPi |            6.99 |
+|          MinLogPi |           -9.18 |
+|            LossPi |           -7.59 |
+|             LossQ |            0.72 |
+|              Time |            60.2 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |            6.05 |
+|          StdEpRet |            3.68 |
+|          MaxEpRet |              30 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            31.7 |
+|      StdTestEpRet |            0.64 |
+|      MaxTestEpRet |              33 |
+|      MinTestEpRet |              31 |
+|             EpLen |            6.05 |
+|         TestEpLen |            31.7 |
+| TotalEnvInteracts |           8e+03 |
+|     AverageQ1Vals |            18.1 |
+|         StdQ1Vals |            10.1 |
+|         MaxQ1Vals |            35.1 |
+|         MinQ1Vals |           -7.59 |
+|     AverageQ2Vals |            18.1 |
+|         StdQ2Vals |            10.1 |
+|         MaxQ2Vals |            35.6 |
+|         MinQ2Vals |           -8.08 |
+|      AverageLogPi |           0.416 |
+|          StdLogPi |            1.47 |
+|          MaxLogPi |            11.6 |
+|          MinLogPi |           -9.53 |
+|            LossPi |           -21.7 |
+|             LossQ |            2.98 |
+|              Time |             148 |
+---------------------------------------
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 129, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 117, in __init__
+    sac.sac()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 324, in sac
+    a = get_action(o.to(self.device))
+AttributeError: 'numpy.ndarray' object has no attribute 'to'

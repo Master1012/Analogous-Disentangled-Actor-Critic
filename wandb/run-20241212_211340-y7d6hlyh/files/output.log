@@ -1,0 +1,108 @@
+Warning: Log dir E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0 already exists! Storing info there anyway.
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0\progress.txt
+[36mSaving config:
+{
+    "exp_name":	"InvertedPendulum-v4",
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001F59FB42320>":	{
+            "epoch_dict":	{},
+            "exp_name":	"InvertedPendulum-v4",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\InvertedPendulum-v4\\\\InvertedPendulum-v4_s0\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "self":	{
+        "<agents.sac.SAC object at 0x000001F597F70E80>":	{
+            "ac_kwargs":	{},
+            "actor_critic":	"MLPActorCritic",
+            "alpha":	0.2,
+            "batch_size":	100,
+            "device":	"cuda",
+            "env_fn":	"<function SAC.__init__.<locals>.<lambda> at 0x000001F59913CCA0>",
+            "epochs":	100,
+            "gamma":	0.99,
+            "logger_kwargs":	{
+                "exp_name":	"InvertedPendulum-v4",
+                "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0"
+            },
+            "lr":	0.001,
+            "max_ep_len":	1000,
+            "num_test_episodes":	10,
+            "polyak":	0.995,
+            "replay_size":	1000000,
+            "save_freq":	1,
+            "seed":	0,
+            "start_steps":	10000,
+            "steps_per_epoch":	4000,
+            "update_after":	1000,
+            "update_every":	50
+        }
+    }
+}
+[32mNumber of parameters: 	 pi: 67586, 	 q1: 67585, 	 q2: 67585
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+tensor([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]) tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        1., 0., 0., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 1.,
+        1., 0., 1., 0., 1., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
+        0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]) tensor([-4.5386e-02, -9.2228e-02,  2.4355e-03, -1.8043e-01, -8.8129e-02,
+        -1.7851e-02, -3.0088e-02, -8.8795e-02, -2.7155e-02, -2.5021e-01,
+        -7.3497e-03, -3.1489e-01, -2.0495e-01, -9.6081e-02, -4.4609e-01,
+        -3.8265e-01, -8.4578e-02, -5.8645e-01, -5.6405e-01, -3.6866e-01,
+        -7.7078e-02, -6.4380e-02, -1.2686e-01, -3.4163e-02, -1.2431e-01,
+        -2.1422e-01, -3.4924e-01, -2.3658e-01, -2.0384e-01, -1.7523e-02,
+        -3.4854e-01, -2.4693e-01, -1.5053e-02, -1.2069e-01, -8.5438e-03,
+        -1.2285e-02, -7.7478e-03, -3.9042e-01, -2.3592e-01, -3.8849e-01,
+        -5.3047e-01, -4.7980e-01, -3.1254e-01, -2.5485e-01, -1.1639e-01,
+        -3.1518e-01,  2.0733e-02, -1.8662e-02, -1.0969e-01, -3.3406e-01,
+        -2.3192e-01, -2.1791e-01, -5.8771e-01, -1.2781e-01, -4.5856e-01,
+        -5.4600e-01, -3.4465e-01, -4.6272e-02, -3.1707e-01, -2.9796e-01,
+        -2.5430e-01, -1.5151e-01, -2.2966e-01, -7.2091e-02, -2.8416e-01,
+        -9.2484e-02, -2.9703e-01,  1.4142e-02, -5.0019e-04, -1.9329e-01,
+        -5.5656e-01, -5.9952e-02, -2.6356e-02, -5.2209e-02, -2.9661e-01,
+         2.5147e-02, -2.6281e-01, -2.2691e-01, -3.0563e-01, -3.2485e-02,
+        -3.5567e-01, -3.4897e-01,  4.9510e-03, -2.4473e-01, -1.2331e-01,
+        -5.1162e-01, -1.9986e-01, -1.6515e-01, -1.6970e-01, -1.7076e-01,
+        -5.1017e-01, -4.4710e-01, -2.0658e-01, -4.4865e-01, -2.8822e-01,
+         5.5107e-03, -8.1972e-02, -4.2370e-03, -1.7825e-02, -7.2725e-02],
+       device='cuda:0') tensor([-0.5524, -0.9298, -0.4327, -0.9346, -0.9792, -0.8860, -0.7918, -0.9589,
+        -0.4508, -0.8828, -0.1238,  0.0888, -0.8630, -0.9855, -0.3325, -0.3783,
+        -0.9838, -0.4319, -0.2940, -0.3716, -0.8372, -0.4537, -0.7995, -0.6353,
+        -0.9604, -0.9567, -0.0021, -0.6358, -0.9656, -0.6581, -0.1840, -0.9204,
+        -0.8811, -0.9203, -0.6898, -0.6908, -0.7863, -0.9691, -0.7247, -0.1304,
+        -0.9710, -0.8850,  0.0143, -0.6025, -0.9813, -0.3765, -0.3818, -0.7269,
+        -0.9715, -0.9053, -0.8162, -0.9649, -0.6334, -0.5954, -0.9756, -0.8811,
+        -0.7557, -0.9781, -0.7637, -0.4540, -0.9371, -0.9145, -0.7618, -0.4201,
+        -0.9820, -0.5036, -0.3912, -0.5580, -0.6390, -0.9106, -0.7745, -0.9411,
+        -0.7739, -0.8096, -0.6654, -0.3527, -0.8134, -0.9803, -0.9136, -0.9054,
+        -0.8913, -0.6672, -0.8439, -0.8935, -0.9900, -0.2653, -0.9601, -0.9541,
+        -0.9065, -0.9522, -0.5701, -0.1145, -0.9694, -0.8463, -0.2537, -0.6766,
+        -0.9891, -0.1953, -0.6928, -0.9196], device='cuda:0')
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 129, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 117, in __init__
+    sac.sac()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 351, in sac
+    update(data=batch)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 262, in update
+    loss_q, q_info = compute_loss_q(data)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 221, in compute_loss_q
+    backup = r + self.gamma * (1 - d) * (q_pi_targ - self.alpha * logp_a2)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!

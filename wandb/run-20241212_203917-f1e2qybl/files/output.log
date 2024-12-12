@@ -1,0 +1,310 @@
+Warning: Log dir E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0 already exists! Storing info there anyway.
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0\progress.txt
+[36mSaving config:
+{
+    "exp_name":	"InvertedPendulum-v4",
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001EAC0352320>":	{
+            "epoch_dict":	{},
+            "exp_name":	"InvertedPendulum-v4",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\InvertedPendulum-v4\\\\InvertedPendulum-v4_s0\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "self":	{
+        "<agents.sac.SAC object at 0x000001EAB87C0E80>":	{
+            "ac_kwargs":	{},
+            "actor_critic":	"MLPActorCritic",
+            "alpha":	0.2,
+            "batch_size":	100,
+            "env_fn":	"<function SAC.__init__.<locals>.<lambda> at 0x000001EAB98E8CA0>",
+            "epochs":	100,
+            "gamma":	0.99,
+            "logger_kwargs":	{
+                "exp_name":	"InvertedPendulum-v4",
+                "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0"
+            },
+            "lr":	0.001,
+            "max_ep_len":	1000,
+            "num_test_episodes":	10,
+            "polyak":	0.995,
+            "replay_size":	1000000,
+            "save_freq":	1,
+            "seed":	0,
+            "start_steps":	10000,
+            "steps_per_epoch":	4000,
+            "update_after":	1000,
+            "update_every":	50
+        }
+    }
+}
+[32mNumber of parameters: 	 pi: 67586, 	 q1: 67585, 	 q2: 67585
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |            5.92 |
+|          StdEpRet |            3.29 |
+|          MaxEpRet |              28 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            39.8 |
+|      StdTestEpRet |            2.44 |
+|      MaxTestEpRet |              44 |
+|      MinTestEpRet |              37 |
+|             EpLen |            5.92 |
+|         TestEpLen |            39.8 |
+| TotalEnvInteracts |           4e+03 |
+|     AverageQ1Vals |            6.27 |
+|         StdQ1Vals |            4.47 |
+|         MaxQ1Vals |              17 |
+|         MinQ1Vals |           -1.74 |
+|     AverageQ2Vals |            6.27 |
+|         StdQ2Vals |            4.48 |
+|         MaxQ2Vals |            17.1 |
+|         MinQ2Vals |           -1.43 |
+|      AverageLogPi |           0.181 |
+|          StdLogPi |            1.16 |
+|          MaxLogPi |            6.95 |
+|          MinLogPi |           -9.63 |
+|            LossPi |           -7.46 |
+|             LossQ |           0.739 |
+|              Time |            44.1 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |            5.96 |
+|          StdEpRet |            3.44 |
+|          MaxEpRet |              32 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            33.3 |
+|      StdTestEpRet |            0.64 |
+|      MaxTestEpRet |              34 |
+|      MinTestEpRet |              32 |
+|             EpLen |            5.96 |
+|         TestEpLen |            33.3 |
+| TotalEnvInteracts |           8e+03 |
+|     AverageQ1Vals |              18 |
+|         StdQ1Vals |            10.3 |
+|         MaxQ1Vals |            37.4 |
+|         MinQ1Vals |           -7.43 |
+|     AverageQ2Vals |              18 |
+|         StdQ2Vals |            10.3 |
+|         MaxQ2Vals |            37.9 |
+|         MinQ2Vals |           -5.31 |
+|      AverageLogPi |           0.532 |
+|          StdLogPi |            1.43 |
+|          MaxLogPi |            18.9 |
+|          MinLogPi |           -8.66 |
+|            LossPi |           -21.7 |
+|             LossQ |            3.16 |
+|              Time |             103 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               3 |
+|      AverageEpRet |            10.9 |
+|          StdEpRet |            15.2 |
+|          MaxEpRet |              79 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            60.1 |
+|      StdTestEpRet |             1.3 |
+|      MaxTestEpRet |              62 |
+|      MinTestEpRet |              58 |
+|             EpLen |            10.9 |
+|         TestEpLen |            60.1 |
+| TotalEnvInteracts |         1.2e+04 |
+|     AverageQ1Vals |            31.5 |
+|         StdQ1Vals |            17.2 |
+|         MaxQ1Vals |            92.4 |
+|         MinQ1Vals |           -14.3 |
+|     AverageQ2Vals |            31.5 |
+|         StdQ2Vals |            17.2 |
+|         MaxQ2Vals |            92.9 |
+|         MinQ2Vals |           -11.2 |
+|      AverageLogPi |            0.75 |
+|          StdLogPi |            1.55 |
+|          MaxLogPi |            26.1 |
+|          MinLogPi |            -9.3 |
+|            LossPi |           -37.9 |
+|             LossQ |            9.65 |
+|              Time |             165 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               4 |
+|      AverageEpRet |            39.6 |
+|          StdEpRet |            15.2 |
+|          MaxEpRet |             108 |
+|          MinEpRet |              25 |
+|  AverageTestEpRet |            53.4 |
+|      StdTestEpRet |            0.49 |
+|      MaxTestEpRet |              54 |
+|      MinTestEpRet |              53 |
+|             EpLen |            39.6 |
+|         TestEpLen |            53.4 |
+| TotalEnvInteracts |         1.6e+04 |
+|     AverageQ1Vals |            42.1 |
+|         StdQ1Vals |            21.8 |
+|         MaxQ1Vals |            66.3 |
+|         MinQ1Vals |             -15 |
+|     AverageQ2Vals |            42.1 |
+|         StdQ2Vals |            21.8 |
+|         MaxQ2Vals |            67.1 |
+|         MinQ2Vals |           -12.8 |
+|      AverageLogPi |           0.621 |
+|          StdLogPi |            1.49 |
+|          MaxLogPi |            54.6 |
+|          MinLogPi |           -9.37 |
+|            LossPi |           -48.5 |
+|             LossQ |            10.1 |
+|              Time |             224 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               5 |
+|      AverageEpRet |             226 |
+|          StdEpRet |             258 |
+|          MaxEpRet |           1e+03 |
+|          MinEpRet |              38 |
+|  AverageTestEpRet |           1e+03 |
+|      StdTestEpRet |               0 |
+|      MaxTestEpRet |           1e+03 |
+|      MinTestEpRet |           1e+03 |
+|             EpLen |             226 |
+|         TestEpLen |           1e+03 |
+| TotalEnvInteracts |           2e+04 |
+|     AverageQ1Vals |            44.4 |
+|         StdQ1Vals |            25.8 |
+|         MaxQ1Vals |            73.4 |
+|         MinQ1Vals |           -16.5 |
+|     AverageQ2Vals |            44.4 |
+|         StdQ2Vals |            25.8 |
+|         MaxQ2Vals |            72.9 |
+|         MinQ2Vals |           -13.8 |
+|      AverageLogPi |           0.651 |
+|          StdLogPi |            1.44 |
+|          MaxLogPi |            50.9 |
+|          MinLogPi |           -9.44 |
+|            LossPi |           -50.4 |
+|             LossQ |            8.31 |
+|              Time |             287 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               6 |
+|      AverageEpRet |           1e+03 |
+|          StdEpRet |               0 |
+|          MaxEpRet |           1e+03 |
+|          MinEpRet |           1e+03 |
+|  AverageTestEpRet |           1e+03 |
+|      StdTestEpRet |               0 |
+|      MaxTestEpRet |           1e+03 |
+|      MinTestEpRet |           1e+03 |
+|             EpLen |           1e+03 |
+|         TestEpLen |           1e+03 |
+| TotalEnvInteracts |         2.4e+04 |
+|     AverageQ1Vals |            50.5 |
+|         StdQ1Vals |              27 |
+|         MaxQ1Vals |            77.5 |
+|         MinQ1Vals |           -17.2 |
+|     AverageQ2Vals |            50.5 |
+|         StdQ2Vals |              27 |
+|         MaxQ2Vals |            77.4 |
+|         MinQ2Vals |           -16.8 |
+|      AverageLogPi |           0.577 |
+|          StdLogPi |            1.45 |
+|          MaxLogPi |            42.2 |
+|          MinLogPi |           -8.72 |
+|            LossPi |           -55.9 |
+|             LossQ |            8.01 |
+|              Time |             352 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               7 |
+|      AverageEpRet |             969 |
+|          StdEpRet |            53.7 |
+|          MaxEpRet |           1e+03 |
+|          MinEpRet |             876 |
+|  AverageTestEpRet |           1e+03 |
+|      StdTestEpRet |               0 |
+|      MaxTestEpRet |           1e+03 |
+|      MinTestEpRet |           1e+03 |
+|             EpLen |             969 |
+|         TestEpLen |           1e+03 |
+| TotalEnvInteracts |         2.8e+04 |
+|     AverageQ1Vals |            57.3 |
+|         StdQ1Vals |            27.7 |
+|         MaxQ1Vals |              82 |
+|         MinQ1Vals |           -20.7 |
+|     AverageQ2Vals |            57.3 |
+|         StdQ2Vals |            27.7 |
+|         MaxQ2Vals |            82.7 |
+|         MinQ2Vals |           -15.4 |
+|      AverageLogPi |           0.555 |
+|          StdLogPi |            1.39 |
+|          MaxLogPi |            17.7 |
+|          MinLogPi |           -9.42 |
+|            LossPi |           -62.3 |
+|             LossQ |            8.25 |
+|              Time |             419 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               8 |
+|      AverageEpRet |           1e+03 |
+|          StdEpRet |               0 |
+|          MaxEpRet |           1e+03 |
+|          MinEpRet |           1e+03 |
+|  AverageTestEpRet |           1e+03 |
+|      StdTestEpRet |               0 |
+|      MaxTestEpRet |           1e+03 |
+|      MinTestEpRet |           1e+03 |
+|             EpLen |           1e+03 |
+|         TestEpLen |           1e+03 |
+| TotalEnvInteracts |         3.2e+04 |
+|     AverageQ1Vals |            63.3 |
+|         StdQ1Vals |            27.9 |
+|         MaxQ1Vals |            86.7 |
+|         MinQ1Vals |           -17.5 |
+|     AverageQ2Vals |            63.3 |
+|         StdQ2Vals |              28 |
+|         MaxQ2Vals |            86.4 |
+|         MinQ2Vals |           -17.9 |
+|      AverageLogPi |           0.391 |
+|          StdLogPi |            1.34 |
+|          MaxLogPi |              29 |
+|          MinLogPi |           -9.46 |
+|            LossPi |           -67.9 |
+|             LossQ |            8.21 |
+|              Time |             485 |
+---------------------------------------
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 129, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 117, in __init__
+    sac.sac()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 342, in sac
+    for j in range(self.update_every):
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 253, in update
+    # First run one gradient descent step for Q1 and Q2
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 202, in compute_loss_q
+    o, a, r, o2, d = data['obs'], data['act'], data['rew'], data['obs2'], data['done']
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\./agents\spinup\sac\core.py", line 77, in forward
+    q = self.q(torch.cat([obs, act], dim=-1))
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\container.py", line 139, in forward
+    input = module(input)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\functional.py", line 1457, in relu
+    result = torch.relu(input)
+KeyboardInterrupt

@@ -40,6 +40,8 @@ from agents.Agent_DDPG_TD3_AAC_VIME import Agent_DDPG_TD3_AAC_VIME
 from agents.Agent_DDPG_TD3_VIME import Agent_DDPG_TD3_VIME
 from agents.Agent_DDPG_TD3 import Agent_DDPG_TD3
 from agents.Agent_DDPG_TD3_AAC_bias_analysis import Agent_DDPG_TD3_AAC_bias_analysis
+from agents.sac import SAC
+
 
 class Trainer():
     def __init__(self, args):
@@ -110,6 +112,9 @@ class Trainer():
                     = self.device)
         elif args.agent == "PPO":
             pass
+        elif args.agent == "SAC":
+            sac=SAC(args)
+            sac.sac()
         else:
             raise NotImplementedError()
 

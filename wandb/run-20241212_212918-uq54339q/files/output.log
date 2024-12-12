@@ -1,0 +1,166 @@
+Warning: Log dir E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0 already exists! Storing info there anyway.
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\InvertedPendulum-v4\InvertedPendulum-v4_s0\progress.txt
+[36mSaving config:
+{
+    "exp_name":	"InvertedPendulum-v4",
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x0000018AF62021D0>":	{
+            "epoch_dict":	{},
+            "exp_name":	"InvertedPendulum-v4",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\InvertedPendulum-v4\\\\InvertedPendulum-v4_s0\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "self":	{
+        "<agents.sac.SAC object at 0x0000018AEE5E3A30>":	{
+            "ac_kwargs":	{},
+            "actor_critic":	"MLPActorCritic",
+            "alpha":	0.2,
+            "batch_size":	100,
+            "device":	"cuda",
+            "env_fn":	"<function SAC.__init__.<locals>.<lambda> at 0x0000018AEF81CCA0>",
+            "epochs":	100,
+            "gamma":	0.99,
+            "logger_kwargs":	{
+                "exp_name":	"InvertedPendulum-v4",
+                "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0"
+            },
+            "lr":	0.001,
+            "max_ep_len":	1000,
+            "num_test_episodes":	10,
+            "polyak":	0.995,
+            "replay_size":	1000000,
+            "save_freq":	1,
+            "seed":	0,
+            "start_steps":	10000,
+            "steps_per_epoch":	4000,
+            "update_after":	1000,
+            "update_every":	50
+        }
+    }
+}
+[32mNumber of parameters: 	 pi: 67586, 	 q1: 67585, 	 q2: 67585
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |            6.17 |
+|          StdEpRet |            3.46 |
+|          MaxEpRet |              21 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            50.3 |
+|      StdTestEpRet |            1.79 |
+|      MaxTestEpRet |              53 |
+|      MinTestEpRet |              47 |
+|             EpLen |            6.17 |
+|         TestEpLen |            50.3 |
+| TotalEnvInteracts |           4e+03 |
+|     AverageQ1Vals |            6.26 |
+|         StdQ1Vals |            4.42 |
+|         MaxQ1Vals |            16.8 |
+|         MinQ1Vals |           -1.78 |
+|     AverageQ2Vals |            6.26 |
+|         StdQ2Vals |            4.42 |
+|         MaxQ2Vals |            16.9 |
+|         MinQ2Vals |           -3.01 |
+|      AverageLogPi |           0.108 |
+|          StdLogPi |            1.04 |
+|          MaxLogPi |            8.47 |
+|          MinLogPi |           -8.86 |
+|            LossPi |           -7.36 |
+|             LossQ |           0.701 |
+|              Time |            53.5 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |            5.86 |
+|          StdEpRet |            3.12 |
+|          MaxEpRet |              20 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            51.5 |
+|      StdTestEpRet |            1.12 |
+|      MaxTestEpRet |              53 |
+|      MinTestEpRet |              50 |
+|             EpLen |            5.86 |
+|         TestEpLen |            51.5 |
+| TotalEnvInteracts |           8e+03 |
+|     AverageQ1Vals |            17.9 |
+|         StdQ1Vals |            10.2 |
+|         MaxQ1Vals |              37 |
+|         MinQ1Vals |           -5.57 |
+|     AverageQ2Vals |            17.9 |
+|         StdQ2Vals |            10.2 |
+|         MaxQ2Vals |            36.2 |
+|         MinQ2Vals |           -8.61 |
+|      AverageLogPi |           0.384 |
+|          StdLogPi |            1.35 |
+|          MaxLogPi |            16.1 |
+|          MinLogPi |           -10.3 |
+|            LossPi |           -21.6 |
+|             LossQ |            3.05 |
+|              Time |             138 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               3 |
+|      AverageEpRet |            9.98 |
+|          StdEpRet |            12.1 |
+|          MaxEpRet |             118 |
+|          MinEpRet |               3 |
+|  AverageTestEpRet |            34.5 |
+|      StdTestEpRet |            1.02 |
+|      MaxTestEpRet |              35 |
+|      MinTestEpRet |              32 |
+|             EpLen |            9.98 |
+|         TestEpLen |            34.5 |
+| TotalEnvInteracts |         1.2e+04 |
+|     AverageQ1Vals |            30.2 |
+|         StdQ1Vals |            16.4 |
+|         MaxQ1Vals |            62.6 |
+|         MinQ1Vals |           -9.66 |
+|     AverageQ2Vals |            30.2 |
+|         StdQ2Vals |            16.5 |
+|         MaxQ2Vals |            61.3 |
+|         MinQ2Vals |           -11.1 |
+|      AverageLogPi |           0.531 |
+|          StdLogPi |             1.5 |
+|          MaxLogPi |            24.5 |
+|          MinLogPi |           -7.96 |
+|            LossPi |           -36.3 |
+|             LossQ |            7.21 |
+|              Time |             223 |
+---------------------------------------
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 129, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 117, in __init__
+    sac.sac()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 354, in sac
+    update(data=batch)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 279, in update
+    loss_pi, pi_info = compute_loss_pi(data)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 242, in compute_loss_pi
+    pi, logp_pi = ac.pi(o)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\./agents\spinup\sac\core.py", line 39, in forward
+    net_out = self.net(obs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\container.py", line 139, in forward
+    input = module(input)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\functional.py", line 1457, in relu
+    result = torch.relu(input)
+KeyboardInterrupt
