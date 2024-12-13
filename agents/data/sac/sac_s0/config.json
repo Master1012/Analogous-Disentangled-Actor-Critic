@@ -9,12 +9,12 @@
     "alpha":	0.2,
     "batch_size":	100,
     "device":	"cuda",
-    "env_fn":	"<function <lambda> at 0x00000175B175ECB0>",
-    "epochs":	50,
+    "env_fn":	"<function <lambda> at 0x00000211752DECB0>",
+    "epochs":	20,
     "exp_name":	"sac",
     "gamma":	0.99,
     "logger":	{
-        "<spinup.utils.logx.EpochLogger object at 0x00000175B1758BE0>":	{
+        "<spinup.utils.logx.EpochLogger object at 0x00000211752D4C70>":	{
             "epoch_dict":	{},
             "exp_name":	"sac",
             "first_row":	true,
@@ -42,5 +42,5 @@
     "start_steps":	10000,
     "steps_per_epoch":	4000,
     "update_after":	1000,
-    "update_every":	50
+    "update_every":	10
 }

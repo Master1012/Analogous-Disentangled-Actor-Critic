@@ -1,0 +1,58 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.10.13",
+    "heartbeatAt": "2024-12-13T18:31:23.435947",
+    "startedAt": "2024-12-13T18:31:21.939199",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--env-name",
+        "InvertedPendulum-v4",
+        "--agent",
+        "SAC"
+    ],
+    "state": "running",
+    "program": "E:\\Analogous-Disentangled-Actor-Critic\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/Master1012/Analogous-Disentangled-Actor-Critic.git",
+        "commit": "b7d5a2d7b5524c1fee50c915d0096415d79f5d63"
+    },
+    "email": "96904882+Shadowking912@users.noreply.github.com",
+    "root": "E:/Analogous-Disentangled-Actor-Critic",
+    "host": "Legion912",
+    "username": "gupta",
+    "executable": "D:\\nlp\\torchenv\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1990.0,
+        "min": 0.0,
+        "max": 3201.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1990.0,
+            "min": 0.0,
+            "max": 3201.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 465.74511337280273,
+            "used": 336.46735763549805
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 13.855525970458984
+    }
+}

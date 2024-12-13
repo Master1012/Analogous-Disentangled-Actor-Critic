@@ -46,7 +46,7 @@ class ReplayBuffer:
 def sac(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0, 
         steps_per_epoch=4000, epochs=100, replay_size=int(1e6), gamma=0.99, 
         polyak=0.995, lr=1e-3, alpha=0.2, batch_size=100, start_steps=10000, 
-        update_after=1000, update_every=50, num_test_episodes=10, max_ep_len=1000, 
+        update_after=1000, update_every=10, num_test_episodes=10, max_ep_len=1000, 
         logger_kwargs=dict(), save_freq=1,device='cuda'):
     """
     Soft Actor-Critic (SAC)
@@ -318,21 +318,22 @@ def sac(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0,
         # Store experience to replay buffer
         replay_buffer.store(o, a, r, o2, d)
 
-        # Super critical, easy to overlook step: make sure to update 
-        # most recent observation!
+        # # Super critical, easy to overlook step: make sure to update 
+        # # most recent observation!
         o = o2
-        
-        # End of trajectory handling
+        wandb.log({"Episode reward": ep_ret, "steps": t})
+        # # End of trajectory handling
         if d or (ep_len == max_ep_len):
             logger.store(EpRet=ep_ret, EpLen=ep_len)
+        
             (o,_), ep_ret, ep_len = env.reset(), 0, 0
 
-        # Update handling
+        # # Update handling
         if t >= update_after and t % update_every == 0:
             for j in range(update_every):
                 batch = replay_buffer.sample_batch(batch_size)
                 update(data=batch)
-        print(t)
+
         # End of epoch handling
         if (t+1) % steps_per_epoch == 0:
             epoch = (t+1) // steps_per_epoch
@@ -357,10 +358,9 @@ def sac(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0,
             logger.log_tabular('LossPi', average_only=True)
             logger.log_tabular('LossQ', average_only=True)
             logger.log_tabular('Time', time.time()-start_time)
-            logger.dump_tabular()
             wandb.log({"Average episode reward": logger.log_current_row['AverageEpRet'],'steps': (epoch+1)*steps_per_epoch})
-
-
+            logger.dump_tabular()
+            
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -369,7 +369,7 @@ parser.add_argument('--hid', type=int, default=400)
 parser.add_argument('--l', type=int, default=2)
 parser.add_argument('--gamma', type=float, default=0.99)
 parser.add_argument('--seed', '-s', type=int, default=0)
-parser.add_argument('--epochs', type=int, default=50)
+parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--exp_name', type=str, default='sac')
 parser.add_argument('--run_id', type=str, default='0')
 args = parser.parse_args()
