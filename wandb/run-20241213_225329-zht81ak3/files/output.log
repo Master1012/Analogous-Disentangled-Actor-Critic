@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\ppo.py", line 392, in <module>
+    ppo(lambda : gym.make(args.env), actor_critic=core.MLPActorCritic,
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\ppo.py", line 213, in ppo
+    env = env_fn()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\ppo.py", line 392, in <lambda>
+    ppo(lambda : gym.make(args.env), actor_critic=core.MLPActorCritic,
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 687, in make
+    env_spec = _find_spec(id)
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 513, in _find_spec
+    ns, name, version = parse_env_id(env_name)
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 280, in parse_env_id
+    raise error.Error(
+gymnasium.error.Error: Malformed environment ID: InvertedPendulum-v4 --experiment_no=1. (Currently all IDs must be of the form [namespace/](env-name)-v(version). (namespace is optional))

@@ -1,0 +1,29 @@
+2024-12-13 22:53:19,810 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-12-13 22:53:19,810 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Configure stats pid to 24012
+2024-12-13 22:53:19,810 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Loading settings from C:\Users\gupta\.config\wandb\settings
+2024-12-13 22:53:19,810 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Loading settings from E:\Analogous-Disentangled-Actor-Critic\wandb\settings
+2024-12-13 22:53:19,811 WARNING MainThread:24012 [wandb_setup.py:_flush():76] Unknown environment variable: WANDB_SERVICE
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'agents\\ppo.py', 'program_abspath': 'E:\\Analogous-Disentangled-Actor-Critic\\agents\\ppo.py', 'program': 'E:\\Analogous-Disentangled-Actor-Critic\\agents\\ppo.py'}
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_init.py:_log_setup():521] Logging user logs to E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_225319-mmplxjsb\logs\debug.log
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_init.py:_log_setup():522] Logging internal logs to E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_225319-mmplxjsb\logs\debug-internal.log
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_init.py:init():561] calling init triggers
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'env': 'InvertedPendulum-v4 --experiment_no=1', 'hid': 400, 'l': 2, 'gamma': 0.99, 'seed': 123, 'cpu': 4, 'steps': 4000, 'epochs': 50, 'exp_name': 'ppo', 'experiment_no': 1}
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_init.py:init():611] starting backend
+2024-12-13 22:53:19,811 INFO    MainThread:24012 [wandb_init.py:init():615] setting up manager
+2024-12-13 22:53:19,814 INFO    MainThread:24012 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-12-13 22:53:19,817 INFO    MainThread:24012 [wandb_init.py:init():623] backend started and connected
+2024-12-13 22:53:19,820 INFO    MainThread:24012 [wandb_init.py:init():715] updated telemetry
+2024-12-13 22:53:19,857 INFO    MainThread:24012 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-12-13 22:53:20,756 INFO    MainThread:24012 [wandb_run.py:_on_init():2357] communicating current version
+2024-12-13 22:53:21,090 INFO    MainThread:24012 [wandb_run.py:_on_init():2366] got version response upgrade_message: "wandb version 0.19.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-12-13 22:53:21,091 INFO    MainThread:24012 [wandb_init.py:init():799] starting run threads in backend
+2024-12-13 22:53:21,419 INFO    MainThread:24012 [wandb_run.py:_console_start():2335] atexit reg
+2024-12-13 22:53:21,419 INFO    MainThread:24012 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-12-13 22:53:21,419 INFO    MainThread:24012 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-12-13 22:53:21,419 INFO    MainThread:24012 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-12-13 22:53:21,420 INFO    MainThread:24012 [wandb_init.py:init():842] run started, returning control to user process

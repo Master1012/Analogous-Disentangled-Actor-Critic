@@ -115,17 +115,16 @@ def main():
     args = parser.parse_args()
     args.code_version = CODE_VERSION
     args.env_extra_dict = {}
-
-    experiment_no=1
+    args.experiment_no = 1
     wandb.init(
         project="ADAC",
         name=f"{args.agent}",
-        group=f"{args.env_name}"+str(experiment_no),
+        group=f"{args.env_name}"+str(args.experiment_no),
         job_type=f"{args.agent}",
         # track hyperparameters and run metadata
         config=vars(args)
     )
-
+    args.wandb_id=wandb.run.id
     trainer = Trainer(args)
     if args.mode == "train":
         trainer.train()

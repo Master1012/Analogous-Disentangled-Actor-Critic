@@ -1,0 +1,10 @@
+
+['mpiexec', '-np', '4', 'D:\\nlp\\torchenv\\python.exe', 'agents\\ppo.py', '--env=InvertedPendulum-v4 --experiment_no=1']
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\ppo.py", line 387, in <module>
+    mpi_fork(args.cpu)  # run parallel code with mpi
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\spinup\utils\mpi_tools.py", line 36, in mpi_fork
+    subprocess.check_call(args, env=env,cwd=os.getcwd())
+  File "D:\nlp\torchenv\lib\subprocess.py", line 369, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['mpiexec', '-np', '4', 'D:\\nlp\\torchenv\\python.exe', 'agents\\ppo.py', '--env=InvertedPendulum-v4 --experiment_no=1']' returned non-zero exit status 1.

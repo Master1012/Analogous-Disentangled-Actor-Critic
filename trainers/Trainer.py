@@ -40,8 +40,7 @@ from agents.Agent_DDPG_TD3_AAC_VIME import Agent_DDPG_TD3_AAC_VIME
 from agents.Agent_DDPG_TD3_VIME import Agent_DDPG_TD3_VIME
 from agents.Agent_DDPG_TD3 import Agent_DDPG_TD3
 from agents.Agent_DDPG_TD3_AAC_bias_analysis import Agent_DDPG_TD3_AAC_bias_analysis
-from agents.sac import SAC
-
+import subprocess
 
 class Trainer():
     def __init__(self, args):
@@ -111,10 +110,11 @@ class Trainer():
                     self.action_type, self.action_params, args, device
                     = self.device)
         elif args.agent == "PPO":
-            pass
+            subprocess.run([sys.executable,"agents\\ppo.py",f"--env={args.env_name}",f"--run_id={args.wandb_id}"])
+            sys.exit()
         elif args.agent == "SAC":
-            sac=SAC(args)
-            sac.sac()
+            subprocess.run([sys.executable,"agents\\sac.py",f"--env={args.env_name}",f"--run_id={args.wandb_id}"])
+            sys.exit()
         else:
             raise NotImplementedError()
 

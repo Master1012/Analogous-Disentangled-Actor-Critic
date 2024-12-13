@@ -12,26 +12,42 @@ from mems.StepMemory import StepMemory
 from utils.OrnsteinUhlenbeckProcess import OrnsteinUhlenbeckProcess
 
 
+
 class Actor(nn.Module):
-    def __init__(self, state_shape, action_dim, action_range):
+    def __init__(self, state_shape, action_dim, action_range, rand_var_dim = 16):
         super(Actor, self).__init__()
 
         self.input_len = len(state_shape)
         if self.input_len == 1:
-            self.network = FCNet(state_shape[0], [200, 32, action_dim], activation_func = "Sigmoid")
+            self.state_encoder = FCNet(state_shape[0], [400, 300], activation_func = "ReLU")
+            self.randomness_encoder = FCNet(300 + rand_var_dim, [100, action_dim], activation_func = "Sigmoid")
         else:
             raise NotImplementedError()
 
         self.action_range = action_range
 
-    def forward(self, state):
+        self.rand_var_dim = rand_var_dim
+
+    def forward(self, state, mode = "Std"):
         if self.input_len == 1:
             if len(state.size()) == 1:
                 state = state.unsqueeze(0)
         else:
             raise NotImplementedError()
 
-        action = self.network(state)
+        if mode == "Std":
+            rand_var = torch.zeros([state.size(0), self.rand_var_dim], dtype = torch.float32).to(state.device)
+        elif mode == "Ent":
+            rand_var = torch.normal(
+                mean = torch.zeros([state.size(0), self.rand_var_dim], dtype = torch.float32),
+                std = 1
+            ).to(state.device)
+        else:
+            raise NotImplementedError()
+
+        state_feature = self.state_encoder(state)
+        action = self.randomness_encoder(torch.cat((state_feature, rand_var), dim = 1))
+
         action = action * (self.action_range[1] - self.action_range[0]) + self.action_range[0]
 
         return action
@@ -43,13 +59,13 @@ class Critic(nn.Module):
 
         self.input_len = len(state_shape)
         if self.input_len == 1:
-            self.state_encoder = FCNet(state_shape[0], [64], activation_func = "ReLU")
+            self.state_encoder = FCNet(state_shape[0] + action_dim, [400], activation_func = "ReLU")
         else:
             raise NotImplementedError()
 
-        self.action_encoder = FCNet(action_dim, [32], activation_func = "ReLU")
+        self.action_encoder = FCNet(400 + action_dim, [300], activation_func = "ReLU")
 
-        self.feature_encoder = FCNet(64 + 32, [64, 32, 1], activation_func = "None")
+        self.feature_encoder = FCNet(300, [1], activation_func = "None")
 
     def forward(self, state, action):
         if self.input_len == 1:
@@ -59,13 +75,12 @@ class Critic(nn.Module):
         else:
             raise NotImplementedError()
 
-        state_feature = self.state_encoder(state)
-        action_feature = self.action_encoder(action)
+        state_feature = self.state_encoder(torch.cat((state, action), dim = 1))
+        action_feature = self.action_encoder(torch.cat((state_feature, action), dim = 1))
 
-        Q_value = self.feature_encoder(torch.cat((state_feature, action_feature), dim = 1))
+        Q_value = self.feature_encoder(action_feature)
 
         return Q_value
-
 
 class Agent_DDPG(Agent):
     def __init__(self, state_shape, action_type, action_params, args, device = None, tau = 1e-3):

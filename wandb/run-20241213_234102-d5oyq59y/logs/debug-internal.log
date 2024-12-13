@@ -1,0 +1,179 @@
+2024-12-13 23:41:02,100 INFO    StreamThr :24288 [internal.py:wandb_internal():86] W&B internal server running at pid: 24288, started at: 2024-12-13 23:41:02.100598
+2024-12-13 23:41:02,102 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status
+2024-12-13 23:41:02,105 INFO    WriterThread:24288 [datastore.py:open_for_write():87] open: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\run-d5oyq59y.wandb
+2024-12-13 23:41:02,106 DEBUG   SenderThread:24288 [sender.py:send():379] send: header
+2024-12-13 23:41:02,145 DEBUG   SenderThread:24288 [sender.py:send():379] send: run
+2024-12-13 23:41:04,562 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:07,211 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:09,619 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:10,842 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: internal_messages
+2024-12-13 23:41:10,843 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: stop_status
+2024-12-13 23:41:12,265 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:14,664 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:15,897 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:17,320 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:19,704 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:20,933 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:22,375 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:24,466 INFO    SenderThread:24288 [dir_watcher.py:__init__():211] watching files in: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files
+2024-12-13 23:41:24,466 INFO    SenderThread:24288 [sender.py:_start_run_threads():1124] run started: d5oyq59y with start time 1734113462.10187
+2024-12-13 23:41:24,466 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: stop_status
+2024-12-13 23:41:24,466 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:24,482 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: check_version
+2024-12-13 23:41:24,766 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:24,845 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: check_version
+2024-12-13 23:41:25,177 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: run_start
+2024-12-13 23:41:25,189 DEBUG   HandlerThread:24288 [system_info.py:__init__():26] System info init
+2024-12-13 23:41:25,190 DEBUG   HandlerThread:24288 [system_info.py:__init__():41] System info init done
+2024-12-13 23:41:25,190 INFO    HandlerThread:24288 [system_monitor.py:start():194] Starting system monitor
+2024-12-13 23:41:25,190 INFO    SystemMonitor:24288 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-12-13 23:41:25,190 INFO    HandlerThread:24288 [system_monitor.py:probe():214] Collecting system info
+2024-12-13 23:41:25,197 INFO    SystemMonitor:24288 [interfaces.py:start():190] Started cpu monitoring
+2024-12-13 23:41:25,203 DEBUG   HandlerThread:24288 [system_info.py:probe():150] Probing system
+2024-12-13 23:41:25,203 INFO    SystemMonitor:24288 [interfaces.py:start():190] Started disk monitoring
+2024-12-13 23:41:25,205 INFO    SystemMonitor:24288 [interfaces.py:start():190] Started gpu monitoring
+2024-12-13 23:41:25,214 INFO    SystemMonitor:24288 [interfaces.py:start():190] Started memory monitoring
+2024-12-13 23:41:25,225 INFO    SystemMonitor:24288 [interfaces.py:start():190] Started network monitoring
+2024-12-13 23:41:25,225 DEBUG   HandlerThread:24288 [system_info.py:_probe_git():135] Probing git
+2024-12-13 23:41:25,291 DEBUG   HandlerThread:24288 [system_info.py:_probe_git():143] Probing git done
+2024-12-13 23:41:25,291 DEBUG   HandlerThread:24288 [system_info.py:probe():198] Probing system done
+2024-12-13 23:41:25,292 DEBUG   HandlerThread:24288 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.10.13', 'heartbeatAt': '2024-12-13T18:11:25.204272', 'startedAt': '2024-12-13T18:11:02.092588', 'docker': None, 'cuda': None, 'args': ('--env=InvertedPendulum-v4', '--run_id=d5oyq59y'), 'state': 'running', 'program': 'E:\\Analogous-Disentangled-Actor-Critic\\agents\\sac.py', 'codePathLocal': 'agents\\sac.py', 'codePath': 'agents\\sac.py', 'git': {'remote': 'https://github.com/Master1012/Analogous-Disentangled-Actor-Critic.git', 'commit': '178a89780590afa9808cf61ff9e2e98ee4bd7ee5'}, 'email': '96904882+Shadowking912@users.noreply.github.com', 'root': 'E:/Analogous-Disentangled-Actor-Critic', 'host': 'Legion912', 'username': 'gupta', 'executable': 'D:\\nlp\\torchenv\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 1990.0, 'min': 0.0, 'max': 3201.0}, 'cpu_freq_per_core': [{'current': 1990.0, 'min': 0.0, 'max': 3201.0}], 'disk': {'/': {'total': 465.74511337280273, 'used': 336.45413970947266}}, 'gpu': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 13.855525970458984}}
+2024-12-13 23:41:25,292 INFO    HandlerThread:24288 [system_monitor.py:probe():224] Finished collecting system info
+2024-12-13 23:41:25,292 INFO    HandlerThread:24288 [system_monitor.py:probe():227] Publishing system info
+2024-12-13 23:41:25,292 DEBUG   HandlerThread:24288 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-12-13 23:41:25,295 ERROR   HandlerThread:24288 [system_info.py:_save_conda():221] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\nlp\torchenv\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 214, in _save_conda
+    subprocess.call(
+  File "D:\nlp\torchenv\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "D:\nlp\torchenv\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2024-12-13 23:41:25,296 DEBUG   HandlerThread:24288 [system_info.py:_save_conda():222] Saving conda packages done
+2024-12-13 23:41:25,296 INFO    HandlerThread:24288 [system_monitor.py:probe():229] Finished publishing system info
+2024-12-13 23:41:25,297 DEBUG   SenderThread:24288 [sender.py:send():379] send: files
+2024-12-13 23:41:25,297 INFO    SenderThread:24288 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-12-13 23:41:25,385 INFO    Thread-16 :24288 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234054-d5oyq59y\files\config.yaml
+2024-12-13 23:41:25,480 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\wandb-metadata.json
+2024-12-13 23:41:25,480 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\conda-environment.yaml
+2024-12-13 23:41:25,498 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: python_packages
+2024-12-13 23:41:25,499 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: python_packages
+2024-12-13 23:41:25,499 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: stop_status
+2024-12-13 23:41:25,500 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: stop_status
+2024-12-13 23:41:25,501 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: internal_messages
+2024-12-13 23:41:25,865 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: stop_status
+2024-12-13 23:41:25,866 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: internal_messages
+2024-12-13 23:41:26,108 DEBUG   SenderThread:24288 [sender.py:send():379] send: telemetry
+2024-12-13 23:41:26,112 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: stop_status
+2024-12-13 23:41:26,492 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\requirements.txt
+2024-12-13 23:41:26,493 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\output.log
+2024-12-13 23:41:26,656 DEBUG   SenderThread:24288 [sender.py:send():379] send: exit
+2024-12-13 23:41:26,657 INFO    SenderThread:24288 [sender.py:send_exit():586] handling exit code: 0
+2024-12-13 23:41:26,657 INFO    SenderThread:24288 [sender.py:send_exit():588] handling runtime: 1
+2024-12-13 23:41:26,659 INFO    SenderThread:24288 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-12-13 23:41:26,659 INFO    SenderThread:24288 [sender.py:send_exit():594] send defer
+2024-12-13 23:41:26,660 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,660 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 0
+2024-12-13 23:41:26,660 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,660 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-12-13 23:41:26,660 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 1
+2024-12-13 23:41:26,660 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,660 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 1
+2024-12-13 23:41:26,661 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,661 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-12-13 23:41:26,661 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 2
+2024-12-13 23:41:26,661 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,661 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 2
+2024-12-13 23:41:26,661 INFO    HandlerThread:24288 [system_monitor.py:finish():203] Stopping system monitor
+2024-12-13 23:41:26,661 DEBUG   SystemMonitor:24288 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-12-13 23:41:26,662 DEBUG   SystemMonitor:24288 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-12-13 23:41:26,662 DEBUG   SystemMonitor:24288 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-12-13 23:41:26,662 INFO    HandlerThread:24288 [interfaces.py:finish():202] Joined cpu monitor
+2024-12-13 23:41:26,662 INFO    HandlerThread:24288 [interfaces.py:finish():202] Joined disk monitor
+2024-12-13 23:41:26,662 INFO    HandlerThread:24288 [interfaces.py:finish():202] Joined gpu monitor
+2024-12-13 23:41:26,662 INFO    HandlerThread:24288 [interfaces.py:finish():202] Joined memory monitor
+2024-12-13 23:41:26,663 INFO    HandlerThread:24288 [interfaces.py:finish():202] Joined network monitor
+2024-12-13 23:41:26,663 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,663 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-12-13 23:41:26,663 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 3
+2024-12-13 23:41:26,663 DEBUG   SenderThread:24288 [sender.py:send():379] send: stats
+2024-12-13 23:41:26,663 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,664 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 3
+2024-12-13 23:41:26,664 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,664 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-12-13 23:41:26,664 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 4
+2024-12-13 23:41:26,664 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,664 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 4
+2024-12-13 23:41:26,665 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,665 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-12-13 23:41:26,665 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 5
+2024-12-13 23:41:26,665 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,665 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 5
+2024-12-13 23:41:26,665 DEBUG   SenderThread:24288 [sender.py:send():379] send: summary
+2024-12-13 23:41:26,666 INFO    SenderThread:24288 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-12-13 23:41:26,666 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,666 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-12-13 23:41:26,666 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 6
+2024-12-13 23:41:26,666 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:26,666 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 6
+2024-12-13 23:41:26,667 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:26,667 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-12-13 23:41:26,670 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:26,672 INFO    wandb-upload_0:24288 [upload_job.py:push():131] Uploaded file C:\Users\gupta\AppData\Local\Temp\tmpp8l_13m5wandb\ady20tjg-wandb-metadata.json
+2024-12-13 23:41:27,012 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 7
+2024-12-13 23:41:27,013 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:27,013 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 7
+2024-12-13 23:41:27,013 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:27,013 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-12-13 23:41:27,504 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\config.yaml
+2024-12-13 23:41:27,505 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\wandb-summary.json
+2024-12-13 23:41:27,660 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-13 23:41:28,518 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\output.log
+2024-12-13 23:41:30,131 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 8
+2024-12-13 23:41:30,131 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: poll_exit
+2024-12-13 23:41:30,131 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:30,132 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 8
+2024-12-13 23:41:30,133 DEBUG   SenderThread:24288 [sender.py:send_request():406] send_request: defer
+2024-12-13 23:41:30,133 INFO    SenderThread:24288 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-12-13 23:41:30,133 INFO    SenderThread:24288 [job_builder.py:build():318] Attempting to build job artifact
+2024-12-13 23:41:30,133 INFO    SenderThread:24288 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-12-13 23:41:30,144 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:30,185 INFO    SenderThread:24288 [job_builder.py:build():431] adding wandb-job metadata file
+2024-12-13 23:41:30,195 INFO    SenderThread:24288 [sender.py:transition_state():614] send defer: 9
+2024-12-13 23:41:30,196 DEBUG   SenderThread:24288 [sender.py:send():379] send: artifact
+2024-12-13 23:41:30,196 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: defer
+2024-12-13 23:41:30,197 INFO    HandlerThread:24288 [handler.py:handle_request_defer():172] handle defer: 9
+2024-12-13 23:41:30,533 INFO    Thread-31 :24288 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241213_234102-d5oyq59y\files\output.log
+2024-12-13 23:41:30,690 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: poll_exit
+2024-12-13 23:41:32,459 INFO    wandb-upload_1:24288 [upload_job.py:push():89] Uploaded file C:\Users\gupta\AppData\Local\Temp\tmpo_n0gai1\wandb-job.json
+2024-12-13 23:41:32,802 INFO    wandb-upload_0:24288 [upload_job.py:push():89] Uploaded file C:\Users\gupta\AppData\Local\wandb\wandb\artifacts\staging\tmpzrjd7wj6
+2024-12-13 23:41:35,200 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:35,747 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:40,256 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:40,817 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:45,306 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:45,865 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:50,351 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:50,908 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:41:55,408 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:41:55,533 DEBUG   SystemMonitor:24288 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-12-13 23:41:55,535 DEBUG   SenderThread:24288 [sender.py:send():379] send: stats
+2024-12-13 23:41:55,965 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:00,587 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:42:01,023 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:05,624 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:42:06,077 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:10,676 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:42:11,128 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:15,741 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:42:16,173 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:20,777 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:42:21,224 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:25,542 DEBUG   SenderThread:24288 [sender.py:send():379] send: stats
+2024-12-13 23:42:26,287 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:26,552 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report
+2024-12-13 23:42:31,340 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: keepalive
+2024-12-13 23:42:31,602 DEBUG   HandlerThread:24288 [handler.py:handle_request():146] handle_request: status_report

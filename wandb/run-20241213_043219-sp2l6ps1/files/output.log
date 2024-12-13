@@ -1,0 +1,43 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   3%|█▊                                                            | 2081/70000 [00:30<14:07, 80.11it/s]
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   4%|██▋                                                           | 3039/70000 [00:42<13:25, 83.10it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 131, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 184, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 239, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG.py", line 148, in train_step
+    self.critic_optim.step()
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\optimizer.py", line 109, in wrapper
+    return func(*args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\autograd\grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\adam.py", line 157, in step
+    adam(params_with_grad,
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\adam.py", line 213, in adam
+    func(params,
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\adam.py", line 265, in _single_tensor_adam
+    exp_avg_sq.mul_(beta2).addcmul_(grad, grad.conj(), value=1 - beta2)
+KeyboardInterrupt

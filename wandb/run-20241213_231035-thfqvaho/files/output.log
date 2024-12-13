@@ -1,0 +1,165 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+Warning: Log dir E:\Analogous-Disentangled-Actor-Critic\agents\data\ppo\ppo_s123 already exists! Storing info there anyway.
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\ppo\ppo_s123\progress.txt
+[36mSaving config:
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            400,
+            400
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "clip_ratio":	0.2,
+    "env_fn":	"<function <lambda> at 0x0000026823BE6DD0>",
+    "epochs":	50,
+    "exp_name":	"ppo",
+    "gamma":	0.99,
+    "lam":	0.97,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x0000026824BD0CA0>":	{
+            "epoch_dict":	{},
+            "exp_name":	"ppo",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\ppo\\ppo_s123",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\ppo\\\\ppo_s123\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"ppo",
+        "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\ppo\\ppo_s123"
+    },
+    "max_ep_len":	1000,
+    "pi_lr":	0.0003,
+    "save_freq":	10,
+    "seed":	123,
+    "steps_per_epoch":	4000,
+    "target_kl":	0.01,
+    "train_pi_iters":	80,
+    "train_v_iters":	80,
+    "vf_lr":	0.001
+}
+[32mNumber of parameters: 	 pi: 162802, 	 v: 162801
+Warning: trajectory cut off by epoch at 6 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+10.161125
+---------------------------------------
+|             Epoch |               0 |
+|      AverageEpRet |            10.2 |
+|          StdEpRet |             5.4 |
+|          MaxEpRet |              69 |
+|          MinEpRet |               4 |
+|             EpLen |            10.2 |
+|      AverageVVals |         -0.0818 |
+|          StdVVals |          0.0223 |
+|          MaxVVals |           0.018 |
+|          MinVVals |          -0.148 |
+| TotalEnvInteracts |           4e+03 |
+|            LossPi |        7.26e-08 |
+|             LossV |            74.4 |
+|       DeltaLossPi |        -0.00413 |
+|        DeltaLossV |           -51.3 |
+|           Entropy |           0.919 |
+|                KL |          0.0713 |
+|          ClipFrac |           0.377 |
+|          StopIter |               1 |
+|              Time |            5.03 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 1 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+14.817843
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |            14.8 |
+|          StdEpRet |            8.74 |
+|          MaxEpRet |              59 |
+|          MinEpRet |               4 |
+|             EpLen |            14.8 |
+|      AverageVVals |            7.14 |
+|          StdVVals |            2.18 |
+|          MaxVVals |            9.27 |
+|          MinVVals |           0.653 |
+| TotalEnvInteracts |           8e+03 |
+|            LossPi |        5.96e-08 |
+|             LossV |            56.3 |
+|       DeltaLossPi |         -0.0137 |
+|        DeltaLossV |           -13.9 |
+|           Entropy |           0.919 |
+|                KL |          0.0412 |
+|          ClipFrac |           0.326 |
+|          StopIter |               1 |
+|              Time |            10.1 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 16 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+19.751244
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |            19.8 |
+|          StdEpRet |            9.99 |
+|          MaxEpRet |              63 |
+|          MinEpRet |               5 |
+|             EpLen |            19.8 |
+|      AverageVVals |             9.8 |
+|          StdVVals |            3.15 |
+|          MaxVVals |            13.2 |
+|          MinVVals |           0.652 |
+| TotalEnvInteracts |         1.2e+04 |
+|            LossPi |        3.73e-09 |
+|             LossV |            53.2 |
+|       DeltaLossPi |        -0.00752 |
+|        DeltaLossV |           -11.9 |
+|           Entropy |           0.918 |
+|                KL |          0.0324 |
+|          ClipFrac |           0.261 |
+|          StopIter |               1 |
+|              Time |            15.5 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 2 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 128, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 114, in __init__
+    subprocess.run([sys.executable,"agents\\ppo.py",f"--env={args.env_name}",f"--run_id={args.wandb_id}"])
+  File "D:\nlp\torchenv\lib\subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1146, in communicate
+    self.wait()
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1506, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+KeyboardInterrupt
+25.365385
+---------------------------------------
+|             Epoch |               3 |
+|      AverageEpRet |            25.4 |
+|          StdEpRet |            11.8 |
+|          MaxEpRet |              56 |
+|          MinEpRet |               5 |
+|             EpLen |            25.4 |
+|      AverageVVals |            11.4 |
+|          StdVVals |            5.23 |
+|          MaxVVals |            17.3 |
+|          MinVVals |           0.494 |
+| TotalEnvInteracts |         1.6e+04 |
+|            LossPi |       -2.61e-08 |
+|             LossV |            57.9 |
+|       DeltaLossPi |        -0.00798 |
+|        DeltaLossV |           -11.8 |
+|           Entropy |           0.918 |
+|                KL |          0.0241 |
+|          ClipFrac |           0.243 |
+|          StopIter |               1 |
+|              Time |            20.9 |
+---------------------------------------

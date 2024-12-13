@@ -1,0 +1,236 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   3%|██▎                                                                            | 2084/70000 [00:25<13:33, 83.47it/s]
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   6%|████▍                                                                          | 3952/70000 [00:48<12:57, 84.93it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   9%|██████▊                                                                        | 6017/70000 [01:14<13:52, 76.86it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 22.0000| CR: 0.0000 SR: 0.0000:  12%|████████▉                                                                     | 8070/70000 [01:38<12:10, 84.77it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 25.0000| CR: 0.0000 SR: 0.0000:  14%|███████████                                                                  | 10007/70000 [02:04<35:15, 28.36it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 34.0000| CR: 0.0000 SR: 0.0000:  17%|█████████████▎                                                               | 12075/70000 [02:30<11:54, 81.06it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 58.0000| CR: 0.0000 SR: 0.0000:  20%|███████████████▌                                                             | 14093/70000 [02:56<11:25, 81.62it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 75.0000| CR: 0.0000 SR: 0.0000:  23%|█████████████████▌                                                           | 15995/70000 [03:19<10:34, 85.14it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 76.0000| CR: 0.0000 SR: 0.0000:  26%|███████████████████▊                                                         | 17996/70000 [03:44<11:26, 75.74it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 60.0000| CR: 0.0000 SR: 0.0000:  29%|██████████████████████▏                                                      | 20162/70000 [04:11<09:34, 86.82it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 77.0000| CR: 0.0000 SR: 0.0000:  31%|████████████████████████▏                                                    | 22013/70000 [04:35<26:41, 29.96it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 55.0000| CR: 0.0000 SR: 0.0000:  34%|██████████████████████████▍                                                  | 24028/70000 [04:59<15:35, 49.12it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 21.0000| CR: 0.0000 SR: 0.0000:  37%|████████████████████████████▋                                                | 26079/70000 [05:23<09:10, 79.83it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 29.0000| CR: 0.0000 SR: 0.0000:  40%|██████████████████████████████▊                                              | 27991/70000 [05:47<07:50, 89.31it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 52.0000| CR: 0.0000 SR: 0.0000:  43%|█████████████████████████████████                                            | 30047/70000 [06:13<14:54, 44.67it/s]
+
+
+ER: 52.0000| CR: 0.0000 SR: 0.0000:  44%|█████████████████████████████████▌                                           | 30485/70000 [06:19<07:32, 87.40it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 141, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 131, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 184, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 239, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG.py", line 129, in train_step
+    Q_batch = self.critic(state_batch, action_batch)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG.py", line 63, in forward
+    action_feature = self.action_encoder(action)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\networks\FCNet.py", line 90, in forward
+    x = self.finishing_activ(x)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\activation.py", line 133, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\functional.py", line 1702, in relu
+    result = torch.relu_(input)
+KeyboardInterrupt

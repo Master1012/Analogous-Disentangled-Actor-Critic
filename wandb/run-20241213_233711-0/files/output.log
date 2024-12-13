@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 20, in <module>
+    from trainers.Trainer import Trainer
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 43, in <module>
+    from agents.sac import SAC
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 376, in <module>
+    sac(lambda : gym.make(args.env), actor_critic=core.MLPActorCritic,
+TypeError: sac() got an unexpected keyword argument 'actor_critic'

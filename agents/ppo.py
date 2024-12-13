@@ -8,11 +8,12 @@ import torch
 from torch.optim import Adam
 import gymnasium as gym
 import time
-from spinup.ppo.core import core
+from spinup.ppo import core
 from spinup.utils.logx import EpochLogger
 from spinup.utils.mpi_pytorch import setup_pytorch_for_mpi, sync_params, mpi_avg_grads
 from spinup.utils.mpi_tools import mpi_fork, mpi_avg, proc_id, mpi_statistics_scalar, num_procs
-
+import wandb
+from spinup.utils.mpi_tools import proc_id
 
 class PPOBuffer:
     """
@@ -87,7 +88,6 @@ class PPOBuffer:
         data = dict(obs=self.obs_buf, act=self.act_buf, ret=self.ret_buf,
                     adv=self.adv_buf, logp=self.logp_buf)
         return {k: torch.as_tensor(v, dtype=torch.float32) for k,v in data.items()}
-
 
 
 def ppo(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0, 
@@ -278,6 +278,7 @@ def ppo(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0,
             mpi_avg_grads(ac.pi)    # average grads across MPI processes
             pi_optimizer.step()
 
+        
         logger.store(StopIter=i)
 
         # Value function learning
@@ -332,17 +333,17 @@ def ppo(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0,
                 if terminal:
                     # only save EpRet / EpLen if trajectory finished
                     logger.store(EpRet=ep_ret, EpLen=ep_len)
+                if proc_id()== 0:
+                    wandb.log({"Episode reward": ep_ret, "steps": (epoch*steps_per_epoch)+t})
                 (o,_,), ep_ret, ep_len = env.reset(), 0, 0
-
-
         # Save model
         if (epoch % save_freq == 0) or (epoch == epochs-1):
             logger.save_state({'env': env}, None)
 
         # Perform PPO update!
         update()
-
-        # Log info about epoch
+        
+        # Log info about epoc
         logger.log_tabular('Epoch', epoch)
         logger.log_tabular('EpRet', with_min_and_max=True)
         logger.log_tabular('EpLen', average_only=True)
@@ -357,23 +358,31 @@ def ppo(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0,
         logger.log_tabular('ClipFrac', average_only=True)
         logger.log_tabular('StopIter', average_only=True)
         logger.log_tabular('Time', time.time()-start_time)
+        if proc_id()== 0:   
+            wandb.log({"Average episode reward": logger.log_current_row['AverageEpRet'],'steps': (epoch+1)*steps_per_epoch})
         logger.dump_tabular()
 
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--env', type=str, default='InvertedPendulum-v4')
-parser.add_argument('--hid', type=int, default=64)
+parser.add_argument('--hid', type=int, default=400)
 parser.add_argument('--l', type=int, default=2)
 parser.add_argument('--gamma', type=float, default=0.99)
-parser.add_argument('--seed', '-s', type=int, default=0)
+parser.add_argument('--seed', '-s', type=int, default=123)
 parser.add_argument('--cpu', type=int, default=4)
 parser.add_argument('--steps', type=int, default=4000)
 parser.add_argument('--epochs', type=int, default=50)
 parser.add_argument('--exp_name', type=str, default='ppo')
+parser.add_argument('--run_id', type=str, default=None)
 args = parser.parse_args()
 
-mpi_fork(args.cpu)  # run parallel code with mpi
 
+mpi_fork(args.cpu)  # run parallel code with mpi
+if proc_id() == 0:
+    wandb.init(
+        project="ADAC",
+        id=args.run_id,reinit=True,
+    )
 from spinup.utils.run_utils import setup_logger_kwargs
 logger_kwargs = setup_logger_kwargs(args.exp_name, args.seed)
 
@@ -381,3 +390,4 @@ ppo(lambda : gym.make(args.env), actor_critic=core.MLPActorCritic,
     ac_kwargs=dict(hidden_sizes=[args.hid]*args.l), gamma=args.gamma, 
     seed=args.seed, steps_per_epoch=args.steps, epochs=args.epochs,
     logger_kwargs=logger_kwargs)
+
