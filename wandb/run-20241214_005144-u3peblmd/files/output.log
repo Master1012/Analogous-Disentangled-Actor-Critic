@@ -1,0 +1,142 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedDoublePendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+Warning: Log dir E:\Analogous-Disentangled-Actor-Critic\agents\data\sac\sac_s0 already exists! Storing info there anyway.
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\sac\sac_s0\progress.txt
+[36mSaving config:
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            400,
+            400
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "alpha":	0.2,
+    "batch_size":	100,
+    "device":	"cuda",
+    "env_fn":	"<function <lambda> at 0x000001E77E10EC20>",
+    "epochs":	20,
+    "exp_name":	"sac",
+    "gamma":	0.99,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001E77E104F70>":	{
+            "epoch_dict":	{},
+            "exp_name":	"sac",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\sac\\sac_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\sac\\\\sac_s0\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"sac",
+        "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\sac\\sac_s0"
+    },
+    "lr":	0.001,
+    "max_ep_len":	1000,
+    "num_test_episodes":	10,
+    "polyak":	0.995,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	10000,
+    "steps_per_epoch":	4000,
+    "update_after":	1000,
+    "update_every":	200
+}
+[32mNumber of parameters: 	 pi: 166002, 	 q1: 166001, 	 q2: 166001
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |            57.5 |
+|          StdEpRet |            17.7 |
+|          MaxEpRet |             139 |
+|          MinEpRet |            35.5 |
+|  AverageTestEpRet |             224 |
+|      StdTestEpRet |            97.6 |
+|      MaxTestEpRet |             475 |
+|      MinTestEpRet |             129 |
+|             EpLen |            6.32 |
+|         TestEpLen |            24.1 |
+| TotalEnvInteracts |           4e+03 |
+|     AverageQ1Vals |              39 |
+|         StdQ1Vals |            30.3 |
+|         MaxQ1Vals |             135 |
+|         MinQ1Vals |          -0.207 |
+|     AverageQ2Vals |              39 |
+|         StdQ2Vals |            30.3 |
+|         MaxQ2Vals |             133 |
+|         MinQ2Vals |          -0.334 |
+|      AverageLogPi |            1.06 |
+|          StdLogPi |            1.53 |
+|          MaxLogPi |            7.43 |
+|          MinLogPi |           -9.24 |
+|            LossPi |           -44.9 |
+|             LossQ |            5.09 |
+|              Time |            68.6 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |              58 |
+|          StdEpRet |            17.5 |
+|          MaxEpRet |             147 |
+|          MinEpRet |            26.9 |
+|  AverageTestEpRet |             473 |
+|      StdTestEpRet |            84.1 |
+|      MaxTestEpRet |             615 |
+|      MinTestEpRet |             297 |
+|             EpLen |            6.38 |
+|         TestEpLen |            50.8 |
+| TotalEnvInteracts |           8e+03 |
+|     AverageQ1Vals |            84.2 |
+|         StdQ1Vals |            81.3 |
+|         MaxQ1Vals |             318 |
+|         MinQ1Vals |            1.39 |
+|     AverageQ2Vals |            84.2 |
+|         StdQ2Vals |            81.3 |
+|         MaxQ2Vals |             309 |
+|         MinQ2Vals |            1.83 |
+|      AverageLogPi |            2.11 |
+|          StdLogPi |            1.83 |
+|          MaxLogPi |            9.46 |
+|          MinLogPi |           -11.3 |
+|            LossPi |            -111 |
+|             LossQ |            10.4 |
+|              Time |             165 |
+---------------------------------------
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 384, in <module>
+    sac(lambda : gym.make(args.env), actor_critic=core.MLPActorCritic,
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 335, in sac
+    update(data=batch)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 244, in update
+    loss_q, q_info = compute_loss_q(data)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\sac.py", line 197, in compute_loss_q
+    a2, logp_a2 = ac.pi(o2)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\spinup\sac\core.py", line 59, in forward
+    logp_pi = pi_distribution.log_prob(pi_action).sum(axis=-1)
+  File "D:\nlp\torchenv\lib\site-packages\torch\distributions\normal.py", line 81, in log_prob
+    return -((value - self.loc) ** 2) / (2 * var) - log_scale - math.log(math.sqrt(2 * math.pi))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 128, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 116, in __init__
+    subprocess.run([sys.executable,"agents\\sac.py",f"--env={args.env_name}",f"--run_id={args.wandb_id}"])
+  File "D:\nlp\torchenv\lib\subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1146, in communicate
+    self.wait()
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "D:\nlp\torchenv\lib\subprocess.py", line 1506, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+KeyboardInterrupt

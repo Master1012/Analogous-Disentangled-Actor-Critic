@@ -1,0 +1,29 @@
+2024-12-14 03:53:36,187 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-12-14 03:53:36,187 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Configure stats pid to 30248
+2024-12-14 03:53:36,187 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Loading settings from C:\Users\gupta\.config\wandb\settings
+2024-12-14 03:53:36,188 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Loading settings from E:\Analogous-Disentangled-Actor-Critic\wandb\settings
+2024-12-14 03:53:36,188 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-12-14 03:53:36,188 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-12-14 03:53:36,189 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': 'E:\\Analogous-Disentangled-Actor-Critic\\main.py', 'program': 'E:\\Analogous-Disentangled-Actor-Critic\\main.py'}
+2024-12-14 03:53:36,189 INFO    MainThread:30248 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-12-14 03:53:36,189 INFO    MainThread:30248 [wandb_init.py:_log_setup():521] Logging user logs to E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241214_035336-03lm3rfr\logs\debug.log
+2024-12-14 03:53:36,190 INFO    MainThread:30248 [wandb_init.py:_log_setup():522] Logging internal logs to E:\Analogous-Disentangled-Actor-Critic\wandb\run-20241214_035336-03lm3rfr\logs\debug-internal.log
+2024-12-14 03:53:36,190 INFO    MainThread:30248 [wandb_init.py:init():561] calling init triggers
+2024-12-14 03:53:36,190 INFO    MainThread:30248 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'env_name': 'Walker2d-v4', 'agent': 'SAC', 'mode': 'train', 'gamma': 0.99, 'seed': 123, 'K': 32, 'max_buffer_size': 100000, 'training_batch_size': 32, 'max_training_steps': 80000, 'max_episode_length': 1000, 'warm_up_steps': 200, 'model_saving_interval': 5000, 'do_not_save': False, 'do_not_load': True, 'evaluate_interval': 2000, 'visualize': False, 'evaluate_num_episodes': 20, 'debug': False, 'cuda': 'cuda:0', 'max_training_hours': 0, 'cpu': False, 'save_path': '', 'env_num': 16, 'memory_step_length': 8, 'level_idx': 1, 'state_mode': 5, 'action_mode': 0, 'reward_mode': 2, 'terminal_mode': 0, 'train_multiple_levels': False, 'multiple_level_start': 1, 'multiple_level_end': 50, 'max_demo_episodes': 50, 'enable_concentration': False, 'concentration_count': 4, 'cooldown_count': 8, 'train_count': 1, 'eval_num': 100, 'do_not_post': False, 'code_version': '1.1.0', 'env_extra_dict': {}, 'experiment_no': 2}
+2024-12-14 03:53:36,190 INFO    MainThread:30248 [wandb_init.py:init():611] starting backend
+2024-12-14 03:53:36,190 INFO    MainThread:30248 [wandb_init.py:init():615] setting up manager
+2024-12-14 03:53:36,198 INFO    MainThread:30248 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-12-14 03:53:36,207 INFO    MainThread:30248 [wandb_init.py:init():623] backend started and connected
+2024-12-14 03:53:36,225 INFO    MainThread:30248 [wandb_init.py:init():715] updated telemetry
+2024-12-14 03:53:36,295 INFO    MainThread:30248 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-12-14 03:53:37,584 INFO    MainThread:30248 [wandb_run.py:_on_init():2357] communicating current version
+2024-12-14 03:53:38,100 INFO    MainThread:30248 [wandb_run.py:_on_init():2366] got version response upgrade_message: "wandb version 0.19.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-12-14 03:53:38,100 INFO    MainThread:30248 [wandb_init.py:init():799] starting run threads in backend
+2024-12-14 03:53:38,874 INFO    MainThread:30248 [wandb_run.py:_console_start():2335] atexit reg
+2024-12-14 03:53:38,875 INFO    MainThread:30248 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-12-14 03:53:38,875 INFO    MainThread:30248 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-12-14 03:53:38,875 INFO    MainThread:30248 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-12-14 03:53:38,877 INFO    MainThread:30248 [wandb_init.py:init():842] run started, returning control to user process
+2024-12-14 04:43:22,432 WARNING MsgRouterThr:30248 [router.py:message_loop():77] message_loop has been closed

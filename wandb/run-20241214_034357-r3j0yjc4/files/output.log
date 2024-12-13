@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\envs\EnvironmentWrapper.py", line 56, in __init__
+    self.env = gym.make(env_name)
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 687, in make
+    env_spec = _find_spec(id)
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 531, in _find_spec
+    _check_version_exists(ns, name, version)
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 397, in _check_version_exists
+    _check_name_exists(ns, name)
+  File "D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py", line 374, in _check_name_exists
+    raise error.NameNotFound(
+gymnasium.error.NameNotFound: Environment `FlappyBird` doesn't exist.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 128, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 62, in __init__
+    self.env = EnvironmentWrapper(args.env_name, seed = args.seed)
+  File "E:\Analogous-Disentangled-Actor-Critic\envs\EnvironmentWrapper.py", line 67, in __init__
+    raise NotImplementedError
+NotImplementedError

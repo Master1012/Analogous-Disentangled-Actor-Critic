@@ -1,0 +1,62 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 4.0000| CR: 0.0000 SR: 0.0000:   3%| | 2001/70000 [01:00<52:07,
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 5.0000| CR: 0.0000 SR: 0.0000:   4%| | 2905/70000 [01:28<32:28,Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 188, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 239, in train_offPolicy
+    self.agent.observe(state, action, reward, done)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_AAC_linear.py", line 243, in observe
+    self.memory.append(state, action, reward, done)
+  File "E:\Analogous-Disentangled-Actor-Critic\mems\StepMemory.py", line 101, in append
+    self.buffer_t["state"] = deepcopy(state)
+  File "D:\nlp\torchenv\lib\copy.py", line 177, in deepcopy
+    _keep_alive(x, memo) # Make sure x lives at least as long as d
+  File "D:\nlp\torchenv\lib\copy.py", line 254, in _keep_alive
+    memo[id(memo)].append(x)
+KeyboardInterrupt

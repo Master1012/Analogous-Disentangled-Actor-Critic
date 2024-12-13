@@ -1,0 +1,631 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment Walker2d-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\Walker2d-v4\Walker2d-v4_s0\progress.txt
+[36mSaving config:
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            400,
+            400
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "alpha":	0.2,
+    "batch_size":	100,
+    "device":	"cuda",
+    "env_fn":	"<function <lambda> at 0x000001571BCEEC20>",
+    "epochs":	20,
+    "exp_name":	"Walker2d-v4",
+    "gamma":	0.99,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001571BCE4E80>":	{
+            "epoch_dict":	{},
+            "exp_name":	"Walker2d-v4",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\Walker2d-v4\\Walker2d-v4_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\Walker2d-v4\\\\Walker2d-v4_s0\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"Walker2d-v4",
+        "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\Walker2d-v4\\Walker2d-v4_s0"
+    },
+    "lr":	0.001,
+    "max_ep_len":	1000,
+    "num_test_episodes":	10,
+    "polyak":	0.995,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	10000,
+    "steps_per_epoch":	4000,
+    "update_after":	1000,
+    "update_every":	200
+}
+[32mNumber of parameters: 	 pi: 172412, 	 q1: 170401, 	 q2: 170401
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |            2.92 |
+|          StdEpRet |            8.01 |
+|          MaxEpRet |              69 |
+|          MinEpRet |           -9.86 |
+|  AverageTestEpRet |        1.02e+03 |
+|      StdTestEpRet |            3.58 |
+|      MaxTestEpRet |        1.03e+03 |
+|      MinTestEpRet |        1.02e+03 |
+|             EpLen |            21.2 |
+|         TestEpLen |           1e+03 |
+| TotalEnvInteracts |           4e+03 |
+|     AverageQ1Vals |            10.9 |
+|         StdQ1Vals |            9.42 |
+|         MaxQ1Vals |            50.3 |
+|         MinQ1Vals |           -9.83 |
+|     AverageQ2Vals |            10.9 |
+|         StdQ2Vals |            9.43 |
+|         MaxQ2Vals |            50.3 |
+|         MinQ2Vals |           -9.77 |
+|      AverageLogPi |           0.736 |
+|          StdLogPi |             3.4 |
+|          MaxLogPi |            19.3 |
+|          MinLogPi |           -14.2 |
+|            LossPi |           -13.6 |
+|             LossQ |            1.82 |
+|              Time |             114 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |            2.44 |
+|          StdEpRet |             5.6 |
+|          MaxEpRet |            32.8 |
+|          MinEpRet |           -8.08 |
+|  AverageTestEpRet |             981 |
+|      StdTestEpRet |            6.61 |
+|      MaxTestEpRet |             989 |
+|      MinTestEpRet |             966 |
+|             EpLen |            21.8 |
+|         TestEpLen |           1e+03 |
+| TotalEnvInteracts |           8e+03 |
+|     AverageQ1Vals |            56.8 |
+|         StdQ1Vals |            24.7 |
+|         MaxQ1Vals |             157 |
+|         MinQ1Vals |           -43.2 |
+|     AverageQ2Vals |            56.8 |
+|         StdQ2Vals |            24.7 |
+|         MaxQ2Vals |             153 |
+|         MinQ2Vals |           -50.1 |
+|      AverageLogPi |            4.14 |
+|          StdLogPi |            4.24 |
+|          MaxLogPi |            41.2 |
+|          MinLogPi |           -14.3 |
+|            LossPi |           -63.4 |
+|             LossQ |            28.9 |
+|              Time |             263 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               3 |
+|      AverageEpRet |            12.7 |
+|          StdEpRet |            54.6 |
+|          MaxEpRet |             342 |
+|          MinEpRet |           -13.2 |
+|  AverageTestEpRet |           -7.02 |
+|      StdTestEpRet |           0.114 |
+|      MaxTestEpRet |           -6.74 |
+|      MinTestEpRet |           -7.16 |
+|             EpLen |            30.5 |
+|         TestEpLen |            17.1 |
+| TotalEnvInteracts |         1.2e+04 |
+|     AverageQ1Vals |             148 |
+|         StdQ1Vals |            47.9 |
+|         MaxQ1Vals |             272 |
+|         MinQ1Vals |           -76.4 |
+|     AverageQ2Vals |             148 |
+|         StdQ2Vals |            47.8 |
+|         MaxQ2Vals |             277 |
+|         MinQ2Vals |           -84.5 |
+|      AverageLogPi |               7 |
+|          StdLogPi |             5.9 |
+|          MaxLogPi |            78.3 |
+|          MinLogPi |             -13 |
+|            LossPi |            -161 |
+|             LossQ |             157 |
+|              Time |             391 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               4 |
+|      AverageEpRet |            28.3 |
+|          StdEpRet |            85.5 |
+|          MaxEpRet |             334 |
+|          MinEpRet |             -38 |
+|  AverageTestEpRet |            17.9 |
+|      StdTestEpRet |            29.6 |
+|      MaxTestEpRet |            66.8 |
+|      MinTestEpRet |           -20.1 |
+|             EpLen |              51 |
+|         TestEpLen |             160 |
+| TotalEnvInteracts |         1.6e+04 |
+|     AverageQ1Vals |             179 |
+|         StdQ1Vals |            48.8 |
+|         MaxQ1Vals |             282 |
+|         MinQ1Vals |            -262 |
+|     AverageQ2Vals |             179 |
+|         StdQ2Vals |            48.7 |
+|         MaxQ2Vals |             280 |
+|         MinQ2Vals |            -189 |
+|      AverageLogPi |            3.62 |
+|          StdLogPi |            5.89 |
+|          MaxLogPi |            88.4 |
+|          MinLogPi |           -12.7 |
+|            LossPi |            -187 |
+|             LossQ |             226 |
+|              Time |             542 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               5 |
+|      AverageEpRet |             136 |
+|          StdEpRet |             117 |
+|          MaxEpRet |             331 |
+|          MinEpRet |           -94.6 |
+|  AverageTestEpRet |             135 |
+|      StdTestEpRet |             142 |
+|      MaxTestEpRet |             502 |
+|      MinTestEpRet |           -24.9 |
+|             EpLen |             180 |
+|         TestEpLen |             262 |
+| TotalEnvInteracts |           2e+04 |
+|     AverageQ1Vals |             170 |
+|         StdQ1Vals |              47 |
+|         MaxQ1Vals |             297 |
+|         MinQ1Vals |           -88.7 |
+|     AverageQ2Vals |             170 |
+|         StdQ2Vals |              47 |
+|         MaxQ2Vals |             296 |
+|         MinQ2Vals |            -120 |
+|      AverageLogPi |            2.94 |
+|          StdLogPi |            5.16 |
+|          MaxLogPi |            56.3 |
+|          MinLogPi |           -14.7 |
+|            LossPi |            -177 |
+|             LossQ |             142 |
+|              Time |             679 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               6 |
+|      AverageEpRet |             180 |
+|          StdEpRet |             104 |
+|          MaxEpRet |             393 |
+|          MinEpRet |           -26.5 |
+|  AverageTestEpRet |            93.9 |
+|      StdTestEpRet |             112 |
+|      MaxTestEpRet |             266 |
+|      MinTestEpRet |           -60.2 |
+|             EpLen |             164 |
+|         TestEpLen |             207 |
+| TotalEnvInteracts |         2.4e+04 |
+|     AverageQ1Vals |             159 |
+|         StdQ1Vals |            41.2 |
+|         MaxQ1Vals |             295 |
+|         MinQ1Vals |            -168 |
+|     AverageQ2Vals |             159 |
+|         StdQ2Vals |            41.2 |
+|         MaxQ2Vals |             294 |
+|         MinQ2Vals |            -153 |
+|      AverageLogPi |            2.26 |
+|          StdLogPi |            4.91 |
+|          MaxLogPi |            51.6 |
+|          MinLogPi |             -15 |
+|            LossPi |            -164 |
+|             LossQ |             117 |
+|              Time |             817 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               7 |
+|      AverageEpRet |             147 |
+|          StdEpRet |             171 |
+|          MaxEpRet |             649 |
+|          MinEpRet |           -58.9 |
+|  AverageTestEpRet |            45.3 |
+|      StdTestEpRet |            94.9 |
+|      MaxTestEpRet |             216 |
+|      MinTestEpRet |           -82.1 |
+|             EpLen |             223 |
+|         TestEpLen |             256 |
+| TotalEnvInteracts |         2.8e+04 |
+|     AverageQ1Vals |             142 |
+|         StdQ1Vals |            36.3 |
+|         MaxQ1Vals |             268 |
+|         MinQ1Vals |            -260 |
+|     AverageQ2Vals |             142 |
+|         StdQ2Vals |            36.3 |
+|         MaxQ2Vals |             261 |
+|         MinQ2Vals |            -232 |
+|      AverageLogPi |            1.71 |
+|          StdLogPi |            4.69 |
+|          MaxLogPi |            62.5 |
+|          MinLogPi |           -12.9 |
+|            LossPi |            -146 |
+|             LossQ |            90.1 |
+|              Time |             967 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               8 |
+|      AverageEpRet |              69 |
+|          StdEpRet |             126 |
+|          MaxEpRet |             463 |
+|          MinEpRet |           -82.9 |
+|  AverageTestEpRet |             332 |
+|      StdTestEpRet |             244 |
+|      MaxTestEpRet |             960 |
+|      MinTestEpRet |            84.9 |
+|             EpLen |             146 |
+|         TestEpLen |             304 |
+| TotalEnvInteracts |         3.2e+04 |
+|     AverageQ1Vals |             126 |
+|         StdQ1Vals |            33.7 |
+|         MaxQ1Vals |             266 |
+|         MinQ1Vals |             -75 |
+|     AverageQ2Vals |             126 |
+|         StdQ2Vals |            33.7 |
+|         MaxQ2Vals |             273 |
+|         MinQ2Vals |            -111 |
+|      AverageLogPi |            1.44 |
+|          StdLogPi |             4.6 |
+|          MaxLogPi |            51.1 |
+|          MinLogPi |           -13.9 |
+|            LossPi |            -129 |
+|             LossQ |            77.2 |
+|              Time |        1.12e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |               9 |
+|      AverageEpRet |             227 |
+|          StdEpRet |             160 |
+|          MaxEpRet |             572 |
+|          MinEpRet |           -46.2 |
+|  AverageTestEpRet |             303 |
+|      StdTestEpRet |             195 |
+|      MaxTestEpRet |             840 |
+|      MinTestEpRet |            66.9 |
+|             EpLen |             200 |
+|         TestEpLen |             249 |
+| TotalEnvInteracts |         3.6e+04 |
+|     AverageQ1Vals |             113 |
+|         StdQ1Vals |            33.4 |
+|         MaxQ1Vals |             255 |
+|         MinQ1Vals |             -77 |
+|     AverageQ2Vals |             113 |
+|         StdQ2Vals |            33.4 |
+|         MaxQ2Vals |             248 |
+|         MinQ2Vals |           -81.4 |
+|      AverageLogPi |            1.26 |
+|          StdLogPi |            4.48 |
+|          MaxLogPi |            53.7 |
+|          MinLogPi |           -13.5 |
+|            LossPi |            -116 |
+|             LossQ |              70 |
+|              Time |        1.27e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              10 |
+|      AverageEpRet |             112 |
+|          StdEpRet |             128 |
+|          MaxEpRet |             400 |
+|          MinEpRet |           -4.32 |
+|  AverageTestEpRet |            5.85 |
+|      StdTestEpRet |            11.6 |
+|      MaxTestEpRet |            34.3 |
+|      MinTestEpRet |           -3.71 |
+|             EpLen |            96.7 |
+|         TestEpLen |            36.4 |
+| TotalEnvInteracts |           4e+04 |
+|     AverageQ1Vals |             107 |
+|         StdQ1Vals |            31.5 |
+|         MaxQ1Vals |             237 |
+|         MinQ1Vals |             -72 |
+|     AverageQ2Vals |             107 |
+|         StdQ2Vals |            31.5 |
+|         MaxQ2Vals |             230 |
+|         MinQ2Vals |           -68.5 |
+|      AverageLogPi |           0.844 |
+|          StdLogPi |            4.27 |
+|          MaxLogPi |            52.8 |
+|          MinLogPi |           -15.1 |
+|            LossPi |            -109 |
+|             LossQ |            63.6 |
+|              Time |        1.42e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              11 |
+|      AverageEpRet |             300 |
+|          StdEpRet |             192 |
+|          MaxEpRet |             717 |
+|          MinEpRet |           -25.9 |
+|  AverageTestEpRet |             204 |
+|      StdTestEpRet |              33 |
+|      MaxTestEpRet |             241 |
+|      MinTestEpRet |             141 |
+|             EpLen |             264 |
+|         TestEpLen |             107 |
+| TotalEnvInteracts |         4.4e+04 |
+|     AverageQ1Vals |             101 |
+|         StdQ1Vals |            30.2 |
+|         MaxQ1Vals |             213 |
+|         MinQ1Vals |           -77.8 |
+|     AverageQ2Vals |             101 |
+|         StdQ2Vals |            30.2 |
+|         MaxQ2Vals |             210 |
+|         MinQ2Vals |           -90.1 |
+|      AverageLogPi |           0.708 |
+|          StdLogPi |            4.15 |
+|          MaxLogPi |            50.6 |
+|          MinLogPi |           -13.7 |
+|            LossPi |            -103 |
+|             LossQ |            49.6 |
+|              Time |        1.59e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              12 |
+|      AverageEpRet |             260 |
+|          StdEpRet |            92.8 |
+|          MaxEpRet |             461 |
+|          MinEpRet |            60.7 |
+|  AverageTestEpRet |             280 |
+|      StdTestEpRet |             125 |
+|      MaxTestEpRet |             490 |
+|      MinTestEpRet |            74.1 |
+|             EpLen |             172 |
+|         TestEpLen |             232 |
+| TotalEnvInteracts |         4.8e+04 |
+|     AverageQ1Vals |            98.5 |
+|         StdQ1Vals |            29.2 |
+|         MaxQ1Vals |             210 |
+|         MinQ1Vals |           -73.7 |
+|     AverageQ2Vals |            98.5 |
+|         StdQ2Vals |            29.2 |
+|         MaxQ2Vals |             210 |
+|         MinQ2Vals |           -74.1 |
+|      AverageLogPi |           0.502 |
+|          StdLogPi |            4.03 |
+|          MaxLogPi |            52.1 |
+|          MinLogPi |           -13.5 |
+|            LossPi |            -100 |
+|             LossQ |            44.7 |
+|              Time |        1.74e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              13 |
+|      AverageEpRet |             329 |
+|          StdEpRet |             116 |
+|          MaxEpRet |             523 |
+|          MinEpRet |            57.8 |
+|  AverageTestEpRet |             425 |
+|      StdTestEpRet |            13.9 |
+|      MaxTestEpRet |             441 |
+|      MinTestEpRet |             400 |
+|             EpLen |             200 |
+|         TestEpLen |             207 |
+| TotalEnvInteracts |         5.2e+04 |
+|     AverageQ1Vals |            97.5 |
+|         StdQ1Vals |            28.8 |
+|         MaxQ1Vals |             210 |
+|         MinQ1Vals |           -81.8 |
+|     AverageQ2Vals |            97.5 |
+|         StdQ2Vals |            28.8 |
+|         MaxQ2Vals |             208 |
+|         MinQ2Vals |           -83.6 |
+|      AverageLogPi |           0.324 |
+|          StdLogPi |            3.95 |
+|          MaxLogPi |            48.9 |
+|          MinLogPi |           -14.6 |
+|            LossPi |           -99.2 |
+|             LossQ |            42.4 |
+|              Time |         1.9e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              14 |
+|      AverageEpRet |             438 |
+|          StdEpRet |            97.6 |
+|          MaxEpRet |             602 |
+|          MinEpRet |             285 |
+|  AverageTestEpRet |             758 |
+|      StdTestEpRet |             227 |
+|      MaxTestEpRet |             987 |
+|      MinTestEpRet |             500 |
+|             EpLen |             250 |
+|         TestEpLen |             639 |
+| TotalEnvInteracts |         5.6e+04 |
+|     AverageQ1Vals |            98.2 |
+|         StdQ1Vals |            27.4 |
+|         MaxQ1Vals |             206 |
+|         MinQ1Vals |           -80.9 |
+|     AverageQ2Vals |            98.2 |
+|         StdQ2Vals |            27.4 |
+|         MaxQ2Vals |             206 |
+|         MinQ2Vals |           -80.7 |
+|      AverageLogPi |           0.326 |
+|          StdLogPi |            3.88 |
+|          MaxLogPi |            47.2 |
+|          MinLogPi |           -14.5 |
+|            LossPi |           -99.9 |
+|             LossQ |              39 |
+|              Time |        2.05e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              15 |
+|      AverageEpRet |             428 |
+|          StdEpRet |            68.3 |
+|          MaxEpRet |             570 |
+|          MinEpRet |             297 |
+|  AverageTestEpRet |             633 |
+|      StdTestEpRet |            40.9 |
+|      MaxTestEpRet |             737 |
+|      MinTestEpRet |             575 |
+|             EpLen |             212 |
+|         TestEpLen |             304 |
+| TotalEnvInteracts |           6e+04 |
+|     AverageQ1Vals |             101 |
+|         StdQ1Vals |            27.6 |
+|         MaxQ1Vals |             221 |
+|         MinQ1Vals |             -69 |
+|     AverageQ2Vals |             101 |
+|         StdQ2Vals |            27.6 |
+|         MaxQ2Vals |             216 |
+|         MinQ2Vals |           -76.7 |
+|      AverageLogPi |            0.47 |
+|          StdLogPi |            3.81 |
+|          MaxLogPi |            47.8 |
+|          MinLogPi |           -14.6 |
+|            LossPi |            -103 |
+|             LossQ |              36 |
+|              Time |        2.21e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              16 |
+|      AverageEpRet |             545 |
+|          StdEpRet |             253 |
+|          MaxEpRet |        1.11e+03 |
+|          MinEpRet |             220 |
+|  AverageTestEpRet |             415 |
+|      StdTestEpRet |            26.5 |
+|      MaxTestEpRet |             441 |
+|      MinTestEpRet |             355 |
+|             EpLen |             392 |
+|         TestEpLen |             163 |
+| TotalEnvInteracts |         6.4e+04 |
+|     AverageQ1Vals |             105 |
+|         StdQ1Vals |            30.4 |
+|         MaxQ1Vals |             233 |
+|         MinQ1Vals |           -85.6 |
+|     AverageQ2Vals |             105 |
+|         StdQ2Vals |            30.4 |
+|         MaxQ2Vals |             232 |
+|         MinQ2Vals |            -142 |
+|      AverageLogPi |           0.459 |
+|          StdLogPi |             3.8 |
+|          MaxLogPi |            52.4 |
+|          MinLogPi |           -14.4 |
+|            LossPi |            -106 |
+|             LossQ |            37.3 |
+|              Time |        2.36e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              17 |
+|      AverageEpRet |             461 |
+|          StdEpRet |            65.7 |
+|          MaxEpRet |             610 |
+|          MinEpRet |             350 |
+|  AverageTestEpRet |             417 |
+|      StdTestEpRet |            47.1 |
+|      MaxTestEpRet |             477 |
+|      MinTestEpRet |             339 |
+|             EpLen |             223 |
+|         TestEpLen |             187 |
+| TotalEnvInteracts |         6.8e+04 |
+|     AverageQ1Vals |             108 |
+|         StdQ1Vals |              32 |
+|         MaxQ1Vals |             249 |
+|         MinQ1Vals |           -59.9 |
+|     AverageQ2Vals |             108 |
+|         StdQ2Vals |              32 |
+|         MaxQ2Vals |             244 |
+|         MinQ2Vals |            -104 |
+|      AverageLogPi |           0.446 |
+|          StdLogPi |            3.85 |
+|          MaxLogPi |            50.3 |
+|          MinLogPi |           -12.9 |
+|            LossPi |            -110 |
+|             LossQ |              39 |
+|              Time |         2.5e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              18 |
+|      AverageEpRet |             347 |
+|          StdEpRet |             131 |
+|          MaxEpRet |             615 |
+|          MinEpRet |            67.3 |
+|  AverageTestEpRet |             505 |
+|      StdTestEpRet |            24.9 |
+|      MaxTestEpRet |             542 |
+|      MinTestEpRet |             470 |
+|             EpLen |             213 |
+|         TestEpLen |             234 |
+| TotalEnvInteracts |         7.2e+04 |
+|     AverageQ1Vals |             112 |
+|         StdQ1Vals |            32.6 |
+|         MaxQ1Vals |             263 |
+|         MinQ1Vals |           -66.8 |
+|     AverageQ2Vals |             112 |
+|         StdQ2Vals |            32.6 |
+|         MaxQ2Vals |             252 |
+|         MinQ2Vals |           -70.7 |
+|      AverageLogPi |            0.46 |
+|          StdLogPi |            3.89 |
+|          MaxLogPi |            51.7 |
+|          MinLogPi |           -13.7 |
+|            LossPi |            -113 |
+|             LossQ |            39.9 |
+|              Time |        2.65e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              19 |
+|      AverageEpRet |             362 |
+|          StdEpRet |            79.9 |
+|          MaxEpRet |             550 |
+|          MinEpRet |             201 |
+|  AverageTestEpRet |             526 |
+|      StdTestEpRet |             114 |
+|      MaxTestEpRet |             772 |
+|      MinTestEpRet |             363 |
+|             EpLen |             197 |
+|         TestEpLen |             326 |
+| TotalEnvInteracts |         7.6e+04 |
+|     AverageQ1Vals |             115 |
+|         StdQ1Vals |            33.9 |
+|         MaxQ1Vals |             275 |
+|         MinQ1Vals |           -76.2 |
+|     AverageQ2Vals |             115 |
+|         StdQ2Vals |            33.9 |
+|         MaxQ2Vals |             265 |
+|         MinQ2Vals |           -57.3 |
+|      AverageLogPi |           0.475 |
+|          StdLogPi |             3.8 |
+|          MaxLogPi |            48.9 |
+|          MinLogPi |           -13.1 |
+|            LossPi |            -116 |
+|             LossQ |            40.3 |
+|              Time |        2.82e+03 |
+---------------------------------------
+---------------------------------------
+|             Epoch |              20 |
+|      AverageEpRet |             433 |
+|          StdEpRet |             191 |
+|          MaxEpRet |             961 |
+|          MinEpRet |            78.9 |
+|  AverageTestEpRet |             216 |
+|      StdTestEpRet |            28.4 |
+|      MaxTestEpRet |             290 |
+|      MinTestEpRet |             196 |
+|             EpLen |             241 |
+|         TestEpLen |             141 |
+| TotalEnvInteracts |           8e+04 |
+|     AverageQ1Vals |             117 |
+|         StdQ1Vals |            35.9 |
+|         MaxQ1Vals |             291 |
+|         MinQ1Vals |           -93.1 |
+|     AverageQ2Vals |             117 |
+|         StdQ2Vals |            35.9 |
+|         MaxQ2Vals |             285 |
+|         MinQ2Vals |           -87.2 |
+|      AverageLogPi |           0.606 |
+|          StdLogPi |            3.71 |
+|          MaxLogPi |            48.5 |
+|          MinLogPi |           -16.1 |
+|            LossPi |            -119 |
+|             LossQ |            42.9 |
+|              Time |        2.95e+03 |
+---------------------------------------

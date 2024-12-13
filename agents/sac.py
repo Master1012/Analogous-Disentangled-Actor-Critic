@@ -372,7 +372,9 @@ parser.add_argument('--seed', '-s', type=int, default=0)
 parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--exp_name', type=str, default='sac')
 parser.add_argument('--run_id', type=str, default='0')
+parser.add_argument('--update_every', type=int, default=200)
 args = parser.parse_args()
+args.exp_name=args.env
 
 from spinup.utils.run_utils import setup_logger_kwargs
 logger_kwargs = setup_logger_kwargs(args.exp_name, args.seed)
@@ -383,6 +385,6 @@ wandb.init(project="ADAC",id=args.run_id,reinit=True)
 sac(lambda : gym.make(args.env), actor_critic=core.MLPActorCritic,
     ac_kwargs=dict(hidden_sizes=[args.hid]*args.l), 
     gamma=args.gamma, seed=args.seed, epochs=args.epochs,
-    logger_kwargs=logger_kwargs)
+    logger_kwargs=logger_kwargs,update_every=args.update_every)
 
 

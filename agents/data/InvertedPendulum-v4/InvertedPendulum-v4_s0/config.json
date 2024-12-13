@@ -1,7 +1,20 @@
 {
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            400,
+            400
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "alpha":	0.2,
+    "batch_size":	100,
+    "device":	"cuda",
+    "env_fn":	"<function <lambda> at 0x000001E6D1D5ECB0>",
+    "epochs":	20,
     "exp_name":	"InvertedPendulum-v4",
+    "gamma":	0.99,
     "logger":	{
-        "<spinup.utils.logx.EpochLogger object at 0x00000247405A22F0>":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001E6D1D54F10>":	{
             "epoch_dict":	{},
             "exp_name":	"InvertedPendulum-v4",
             "first_row":	true,
@@ -15,31 +28,19 @@
             }
         }
     },
-    "self":	{
-        "<agents.sac.SAC object at 0x0000024738813B50>":	{
-            "ac_kwargs":	{},
-            "actor_critic":	"MLPActorCritic",
-            "alpha":	0.2,
-            "batch_size":	100,
-            "device":	"cuda",
-            "env_fn":	"<function SAC.__init__.<locals>.<lambda> at 0x0000024739A2CCA0>",
-            "epochs":	100,
-            "gamma":	0.99,
-            "logger_kwargs":	{
-                "exp_name":	"InvertedPendulum-v4",
-                "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0"
-            },
-            "lr":	0.001,
-            "max_ep_len":	1000,
-            "num_test_episodes":	10,
-            "polyak":	0.995,
-            "replay_size":	1000000,
-            "save_freq":	1,
-            "seed":	0,
-            "start_steps":	10000,
-            "steps_per_epoch":	4000,
-            "update_after":	1000,
-            "update_every":	50
-        }
-    }
+    "logger_kwargs":	{
+        "exp_name":	"InvertedPendulum-v4",
+        "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\InvertedPendulum-v4\\InvertedPendulum-v4_s0"
+    },
+    "lr":	0.001,
+    "max_ep_len":	1000,
+    "num_test_episodes":	10,
+    "polyak":	0.995,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	10000,
+    "steps_per_epoch":	4000,
+    "update_after":	1000,
+    "update_every":	200
 }

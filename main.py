@@ -39,7 +39,7 @@ def main():
                         help = "Maximum size of replay memory (default: 100000)")
     parser.add_argument("--training-batch-size", type = int, default =32 ,
                         help = "Training batch size (default: 32)")
-    parser.add_argument("--max-training-steps", type = int, default = 70000,
+    parser.add_argument("--max-training-steps", type = int, default = 80000,
                         help = "Maximum training steps (default: 10000000)")
     parser.add_argument("--max-episode-length", type = int, default = 1000,
                         help = "Maximum length for an episode (default: 1000)")
@@ -115,7 +115,7 @@ def main():
     args = parser.parse_args()
     args.code_version = CODE_VERSION
     args.env_extra_dict = {}
-    args.experiment_no = 1
+    args.experiment_no = 2
     wandb.init(
         project="ADAC",
         name=f"{args.agent}",

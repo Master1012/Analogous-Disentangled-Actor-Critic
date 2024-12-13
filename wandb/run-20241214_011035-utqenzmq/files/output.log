@@ -1,0 +1,518 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment Hopper-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+[32mLogging data to E:\Analogous-Disentangled-Actor-Critic\agents\data\Hopper-v4\Hopper-v4_s123\progress.txt
+[36mSaving config:
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            400,
+            400
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "clip_ratio":	0.2,
+    "env_fn":	"<function <lambda> at 0x0000025B18422EF0>",
+    "epochs":	20,
+    "exp_name":	"Hopper-v4",
+    "gamma":	0.99,
+    "lam":	0.97,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x0000025B19414D90>":	{
+            "epoch_dict":	{},
+            "exp_name":	"Hopper-v4",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\Hopper-v4\\Hopper-v4_s123",
+            "output_file":	{
+                "<_io.TextIOWrapper name='E:\\\\Analogous-Disentangled-Actor-Critic\\\\agents\\\\data\\\\Hopper-v4\\\\Hopper-v4_s123\\\\progress.txt' mode='w' encoding='cp1252'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"Hopper-v4",
+        "output_dir":	"E:\\Analogous-Disentangled-Actor-Critic\\agents\\data\\Hopper-v4\\Hopper-v4_s123"
+    },
+    "max_ep_len":	1000,
+    "pi_lr":	0.0003,
+    "save_freq":	10,
+    "seed":	123,
+    "steps_per_epoch":	4000,
+    "target_kl":	0.01,
+    "train_pi_iters":	80,
+    "train_v_iters":	80,
+    "vf_lr":	0.001
+}
+[32mNumber of parameters: 	 pi: 166406, 	 v: 165601
+Warning: trajectory cut off by epoch at 15 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+---------------------------------------
+|             Epoch |               0 |
+|      AverageEpRet |            26.5 |
+|          StdEpRet |              25 |
+|          MaxEpRet |             206 |
+|          MinEpRet |            8.31 |
+|             EpLen |            33.1 |
+|      AverageVVals |          0.0596 |
+|          StdVVals |           0.165 |
+|          MaxVVals |           0.472 |
+|          MinVVals |          -0.364 |
+| TotalEnvInteracts |           4e+03 |
+|            LossPi |        -4.1e-08 |
+|             LossV |             578 |
+|       DeltaLossPi |          0.0288 |
+|        DeltaLossV |            -336 |
+|           Entropy |           0.919 |
+|                KL |           0.114 |
+|          ClipFrac |           0.627 |
+|          StopIter |               1 |
+|              Time |            9.64 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 42 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+---------------------------------------
+|             Epoch |               1 |
+|      AverageEpRet |             129 |
+|          StdEpRet |            64.2 |
+|          MaxEpRet |             256 |
+|          MinEpRet |            16.9 |
+|             EpLen |            80.7 |
+|      AverageVVals |            25.6 |
+|          StdVVals |            5.94 |
+|          MaxVVals |            30.8 |
+|          MinVVals |           -6.48 |
+| TotalEnvInteracts |           8e+03 |
+|            LossPi |       -2.42e-08 |
+|             LossV |         2.5e+03 |
+|       DeltaLossPi |          0.0351 |
+|        DeltaLossV |       -1.41e+03 |
+|           Entropy |           0.919 |
+|                KL |          0.0825 |
+|          ClipFrac |           0.573 |
+|          StopIter |               1 |
+|              Time |              19 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 29 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+---------------------------------------
+|             Epoch |               2 |
+|      AverageEpRet |             108 |
+|          StdEpRet |            42.4 |
+|          MaxEpRet |             227 |
+|          MinEpRet |              54 |
+|             EpLen |            60.8 |
+|      AverageVVals |            62.7 |
+|          StdVVals |            1.87 |
+|          MaxVVals |            63.1 |
+|          MinVVals |            30.6 |
+| TotalEnvInteracts |         1.2e+04 |
+|            LossPi |        1.86e-09 |
+|             LossV |             972 |
+|       DeltaLossPi |          0.0165 |
+|        DeltaLossV |           -41.7 |
+|           Entropy |           0.918 |
+|                KL |          0.0446 |
+|          ClipFrac |           0.452 |
+|          StopIter |               1 |
+|              Time |            28.6 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 36 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+---------------------------------------
+|             Epoch |               3 |
+|      AverageEpRet |             150 |
+|          StdEpRet |            52.9 |
+|          MaxEpRet |             230 |
+|          MinEpRet |              58 |
+|             EpLen |            73.2 |
+|      AverageVVals |            57.5 |
+|          StdVVals |          0.0433 |
+|          MaxVVals |            57.5 |
+|          MinVVals |            56.6 |
+| TotalEnvInteracts |         1.6e+04 |
+|            LossPi |       -2.79e-08 |
+|             LossV |        1.61e+03 |
+|       DeltaLossPi |          0.0215 |
+|        DeltaLossV |            -272 |
+|           Entropy |           0.918 |
+|                KL |          0.0634 |
+|          ClipFrac |           0.511 |
+|          StopIter |               1 |
+|              Time |            40.9 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 77 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+---------------------------------------
+|             Epoch |               4 |
+|      AverageEpRet |             151 |
+|          StdEpRet |              73 |
+|          MaxEpRet |             221 |
+|          MinEpRet |            12.9 |
+|             EpLen |            72.2 |
+|      AverageVVals |            74.3 |
+|          StdVVals |            0.03 |
+|          MaxVVals |            74.3 |
+|          MinVVals |            73.2 |
+| TotalEnvInteracts |           2e+04 |
+|            LossPi |       -2.61e-08 |
+|             LossV |        1.75e+03 |
+|       DeltaLossPi |        0.000953 |
+|        DeltaLossV |           -33.1 |
+|           Entropy |           0.918 |
+|                KL |          0.0177 |
+|          ClipFrac |           0.208 |
+|          StopIter |               1 |
+|              Time |            51.7 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 17 steps.
+[32mEarly stopping at step 2 due to reaching max kl.
+---------------------------------------
+|             Epoch |               5 |
+|      AverageEpRet |             172 |
+|          StdEpRet |            63.6 |
+|          MaxEpRet |             226 |
+|          MinEpRet |            25.1 |
+|             EpLen |            79.6 |
+|      AverageVVals |            80.2 |
+|          StdVVals |          0.0171 |
+|          MaxVVals |            80.2 |
+|          MinVVals |            79.8 |
+| TotalEnvInteracts |         2.4e+04 |
+|            LossPi |       -1.21e-08 |
+|             LossV |        1.63e+03 |
+|       DeltaLossPi |         0.00566 |
+|        DeltaLossV |           -24.4 |
+|           Entropy |           0.918 |
+|                KL |          0.0271 |
+|          ClipFrac |           0.317 |
+|          StopIter |               2 |
+|              Time |            60.2 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 71 steps.
+---------------------------------------
+|             Epoch |               6 |
+|      AverageEpRet |             210 |
+|          StdEpRet |              20 |
+|          MaxEpRet |             224 |
+|          MinEpRet |              97 |
+|             EpLen |            92.9 |
+|      AverageVVals |            85.2 |
+|          StdVVals |          0.0113 |
+|          MaxVVals |            85.2 |
+|          MinVVals |              85 |
+| TotalEnvInteracts |         2.8e+04 |
+|            LossPi |       -2.33e-10 |
+|             LossV |         1.6e+03 |
+|       DeltaLossPi |         -0.0133 |
+|        DeltaLossV |           -86.9 |
+|           Entropy |           0.918 |
+|                KL |         0.00579 |
+|          ClipFrac |          0.0845 |
+|          StopIter |              79 |
+|              Time |            75.4 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 58 steps.
+---------------------------------------
+|             Epoch |               7 |
+|      AverageEpRet |             207 |
+|          StdEpRet |            29.6 |
+|          MaxEpRet |             224 |
+|          MinEpRet |            43.7 |
+|             EpLen |            91.5 |
+|      AverageVVals |            94.6 |
+|          StdVVals |          0.0174 |
+|          MaxVVals |            94.6 |
+|          MinVVals |              94 |
+| TotalEnvInteracts |         3.2e+04 |
+|            LossPi |        5.59e-09 |
+|             LossV |         1.5e+03 |
+|       DeltaLossPi |         -0.0144 |
+|        DeltaLossV |           -3.27 |
+|           Entropy |           0.916 |
+|                KL |         0.00889 |
+|          ClipFrac |           0.093 |
+|          StopIter |              79 |
+|              Time |            90.6 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 64 steps.
+[32mEarly stopping at step 6 due to reaching max kl.
+---------------------------------------
+|             Epoch |               8 |
+|      AverageEpRet |             215 |
+|          StdEpRet |            12.7 |
+|          MaxEpRet |             227 |
+|          MinEpRet |             142 |
+|             EpLen |            94.3 |
+|      AverageVVals |            92.8 |
+|          StdVVals |            0.01 |
+|          MaxVVals |            92.8 |
+|          MinVVals |            92.5 |
+| TotalEnvInteracts |         3.6e+04 |
+|            LossPi |        1.69e-09 |
+|             LossV |         1.5e+03 |
+|       DeltaLossPi |         0.00329 |
+|        DeltaLossV |            -5.8 |
+|           Entropy |           0.921 |
+|                KL |          0.0159 |
+|          ClipFrac |           0.251 |
+|          StopIter |               6 |
+|              Time |            98.7 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 80 steps.
+---------------------------------------
+|             Epoch |               9 |
+|      AverageEpRet |             210 |
+|          StdEpRet |            15.4 |
+|          MaxEpRet |             232 |
+|          MinEpRet |             158 |
+|             EpLen |            92.2 |
+|      AverageVVals |            95.2 |
+|          StdVVals |         0.00694 |
+|          MaxVVals |            95.2 |
+|          MinVVals |              95 |
+| TotalEnvInteracts |           4e+04 |
+|            LossPi |       -3.73e-09 |
+|             LossV |        1.56e+03 |
+|       DeltaLossPi |         -0.0126 |
+|        DeltaLossV |          -0.784 |
+|           Entropy |           0.921 |
+|                KL |         0.00609 |
+|          ClipFrac |          0.0793 |
+|          StopIter |              79 |
+|              Time |             112 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 72 steps.
+---------------------------------------
+|             Epoch |              10 |
+|      AverageEpRet |             214 |
+|          StdEpRet |            7.54 |
+|          MaxEpRet |             223 |
+|          MinEpRet |             178 |
+|             EpLen |            93.3 |
+|      AverageVVals |            96.1 |
+|          StdVVals |          0.0139 |
+|          MaxVVals |            96.1 |
+|          MinVVals |            95.5 |
+| TotalEnvInteracts |         4.4e+04 |
+|            LossPi |        9.34e-09 |
+|             LossV |        1.48e+03 |
+|       DeltaLossPi |         -0.0122 |
+|        DeltaLossV |         -0.0285 |
+|           Entropy |           0.922 |
+|                KL |         0.00453 |
+|          ClipFrac |          0.0693 |
+|          StopIter |              79 |
+|              Time |             126 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 70 steps.
+[32mEarly stopping at step 5 due to reaching max kl.
+---------------------------------------
+|             Epoch |              11 |
+|      AverageEpRet |             213 |
+|          StdEpRet |               9 |
+|          MaxEpRet |             223 |
+|          MinEpRet |             171 |
+|             EpLen |            92.9 |
+|      AverageVVals |              96 |
+|          StdVVals |          0.0037 |
+|          MaxVVals |              96 |
+|          MinVVals |            95.9 |
+| TotalEnvInteracts |         4.8e+04 |
+|            LossPi |        2.82e-08 |
+|             LossV |        1.51e+03 |
+|       DeltaLossPi |        -0.00437 |
+|        DeltaLossV |         -0.0165 |
+|           Entropy |           0.915 |
+|                KL |          0.0165 |
+|          ClipFrac |           0.136 |
+|          StopIter |               5 |
+|              Time |             134 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 52 steps.
+---------------------------------------
+|             Epoch |              12 |
+|      AverageEpRet |             214 |
+|          StdEpRet |            9.47 |
+|          MaxEpRet |             225 |
+|          MinEpRet |             167 |
+|             EpLen |            93.7 |
+|      AverageVVals |              96 |
+|          StdVVals |         0.00471 |
+|          MaxVVals |            96.1 |
+|          MinVVals |            95.9 |
+| TotalEnvInteracts |         5.2e+04 |
+|            LossPi |        1.96e-08 |
+|             LossV |        1.49e+03 |
+|       DeltaLossPi |         -0.0162 |
+|        DeltaLossV |         -0.0406 |
+|           Entropy |           0.915 |
+|                KL |         0.00832 |
+|          ClipFrac |          0.0958 |
+|          StopIter |              79 |
+|              Time |             148 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 57 steps.
+[32mEarly stopping at step 2 due to reaching max kl.
+---------------------------------------
+|             Epoch |              13 |
+|      AverageEpRet |             215 |
+|          StdEpRet |            4.36 |
+|          MaxEpRet |             223 |
+|          MinEpRet |             198 |
+|             EpLen |            93.8 |
+|      AverageVVals |            95.9 |
+|          StdVVals |         0.00366 |
+|          MaxVVals |            95.9 |
+|          MinVVals |            95.7 |
+| TotalEnvInteracts |         5.6e+04 |
+|            LossPi |       -3.67e-09 |
+|             LossV |        1.47e+03 |
+|       DeltaLossPi |         0.00395 |
+|        DeltaLossV |         -0.0264 |
+|           Entropy |           0.913 |
+|                KL |          0.0168 |
+|          ClipFrac |           0.211 |
+|          StopIter |               2 |
+|              Time |             155 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 76 steps.
+---------------------------------------
+|             Epoch |              14 |
+|      AverageEpRet |             213 |
+|          StdEpRet |            8.55 |
+|          MaxEpRet |             223 |
+|          MinEpRet |             176 |
+|             EpLen |              93 |
+|      AverageVVals |            95.7 |
+|          StdVVals |         0.00273 |
+|          MaxVVals |            95.7 |
+|          MinVVals |            95.7 |
+| TotalEnvInteracts |           6e+04 |
+|            LossPi |        6.17e-09 |
+|             LossV |        1.51e+03 |
+|       DeltaLossPi |         -0.0153 |
+|        DeltaLossV |          -0.293 |
+|           Entropy |           0.913 |
+|                KL |         0.00687 |
+|          ClipFrac |           0.123 |
+|          StopIter |              79 |
+|              Time |             168 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 83 steps.
+---------------------------------------
+|             Epoch |              15 |
+|      AverageEpRet |             212 |
+|          StdEpRet |              15 |
+|          MaxEpRet |             231 |
+|          MinEpRet |             145 |
+|             EpLen |            92.7 |
+|      AverageVVals |            96.3 |
+|          StdVVals |          0.0028 |
+|          MaxVVals |            96.3 |
+|          MinVVals |            96.2 |
+| TotalEnvInteracts |         6.4e+04 |
+|            LossPi |       -8.18e-09 |
+|             LossV |        1.54e+03 |
+|       DeltaLossPi |         -0.0156 |
+|        DeltaLossV |        -0.00778 |
+|           Entropy |            0.91 |
+|                KL |          0.0111 |
+|          ClipFrac |           0.111 |
+|          StopIter |              79 |
+|              Time |             181 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 38 steps.
+---------------------------------------
+|             Epoch |              16 |
+|      AverageEpRet |             218 |
+|          StdEpRet |            6.31 |
+|          MaxEpRet |             227 |
+|          MinEpRet |             201 |
+|             EpLen |            94.8 |
+|      AverageVVals |            96.2 |
+|          StdVVals |         0.00323 |
+|          MaxVVals |            96.2 |
+|          MinVVals |            96.1 |
+| TotalEnvInteracts |         6.8e+04 |
+|            LossPi |       -2.59e-08 |
+|             LossV |        1.47e+03 |
+|       DeltaLossPi |         -0.0166 |
+|        DeltaLossV |          -0.368 |
+|           Entropy |           0.919 |
+|                KL |         0.00742 |
+|          ClipFrac |            0.11 |
+|          StopIter |              79 |
+|              Time |             193 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 62 steps.
+[32mEarly stopping at step 1 due to reaching max kl.
+---------------------------------------
+|             Epoch |              17 |
+|      AverageEpRet |             214 |
+|          StdEpRet |            11.7 |
+|          MaxEpRet |             227 |
+|          MinEpRet |             185 |
+|             EpLen |            93.5 |
+|      AverageVVals |            95.6 |
+|          StdVVals |         0.00261 |
+|          MaxVVals |            95.6 |
+|          MinVVals |            95.5 |
+| TotalEnvInteracts |         7.2e+04 |
+|            LossPi |       -2.15e-08 |
+|             LossV |        1.49e+03 |
+|       DeltaLossPi |        -0.00535 |
+|        DeltaLossV |         -0.0316 |
+|           Entropy |           0.921 |
+|                KL |          0.0176 |
+|          ClipFrac |           0.145 |
+|          StopIter |               1 |
+|              Time |             200 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 39 steps.
+---------------------------------------
+|             Epoch |              18 |
+|      AverageEpRet |             220 |
+|          StdEpRet |            6.48 |
+|          MaxEpRet |             230 |
+|          MinEpRet |             192 |
+|             EpLen |            95.8 |
+|      AverageVVals |            95.8 |
+|          StdVVals |         0.00688 |
+|          MaxVVals |            95.8 |
+|          MinVVals |            95.5 |
+| TotalEnvInteracts |         7.6e+04 |
+|            LossPi |        1.21e-08 |
+|             LossV |        1.48e+03 |
+|       DeltaLossPi |         -0.0171 |
+|        DeltaLossV |           -0.17 |
+|           Entropy |           0.921 |
+|                KL |         0.00676 |
+|          ClipFrac |           0.106 |
+|          StopIter |              79 |
+|              Time |             212 |
+---------------------------------------
+Warning: trajectory cut off by epoch at 47 steps.
+---------------------------------------
+|             Epoch |              19 |
+|      AverageEpRet |             219 |
+|          StdEpRet |            4.04 |
+|          MaxEpRet |             226 |
+|          MinEpRet |             207 |
+|             EpLen |            95.2 |
+|      AverageVVals |            95.4 |
+|          StdVVals |         0.00264 |
+|          MaxVVals |            95.4 |
+|          MinVVals |            95.3 |
+| TotalEnvInteracts |           8e+04 |
+|            LossPi |        6.42e-09 |
+|             LossV |        1.47e+03 |
+|       DeltaLossPi |         -0.0193 |
+|        DeltaLossV |         -0.0616 |
+|           Entropy |           0.908 |
+|                KL |         0.00978 |
+|          ClipFrac |           0.111 |
+|          StopIter |              79 |
+|              Time |             223 |
+---------------------------------------

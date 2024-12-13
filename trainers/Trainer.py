@@ -40,6 +40,7 @@ from agents.Agent_DDPG_TD3_AAC_VIME import Agent_DDPG_TD3_AAC_VIME
 from agents.Agent_DDPG_TD3_VIME import Agent_DDPG_TD3_VIME
 from agents.Agent_DDPG_TD3 import Agent_DDPG_TD3
 from agents.Agent_DDPG_TD3_AAC_bias_analysis import Agent_DDPG_TD3_AAC_bias_analysis
+from agents.Agent_DDPG_AAC_linear import Agent_DDPG_AAC_Linear
 import subprocess
 
 class Trainer():
@@ -115,6 +116,10 @@ class Trainer():
         elif args.agent == "SAC":
             subprocess.run([sys.executable,"agents\\sac.py",f"--env={args.env_name}",f"--run_id={args.wandb_id}"])
             sys.exit()
+        elif args.agent == "AAC_Linear":
+            self.agent = Agent_DDPG_AAC_Linear(self.state_shape, self.action_type,
+                                        self.action_params, args,
+                                        device = self.device)
         else:
             raise NotImplementedError()
 

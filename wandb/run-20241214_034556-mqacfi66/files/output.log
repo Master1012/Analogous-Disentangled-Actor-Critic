@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 128, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 62, in __init__
+    self.env = EnvironmentWrapper(args.env_name, seed = args.seed)
+  File "E:\Analogous-Disentangled-Actor-Critic\envs\EnvironmentWrapper.py", line 61, in __init__
+    self.gym_max_episode_steps = self.env._max_episode_steps
+AttributeError: 'OrderEnforcing' object has no attribute '_max_episode_steps'

@@ -371,11 +371,11 @@ parser.add_argument('--gamma', type=float, default=0.99)
 parser.add_argument('--seed', '-s', type=int, default=123)
 parser.add_argument('--cpu', type=int, default=4)
 parser.add_argument('--steps', type=int, default=4000)
-parser.add_argument('--epochs', type=int, default=50)
+parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--exp_name', type=str, default='ppo')
 parser.add_argument('--run_id', type=str, default=None)
 args = parser.parse_args()
-
+args.exp_name=args.env+"ppo"
 
 mpi_fork(args.cpu)  # run parallel code with mpi
 if proc_id() == 0:

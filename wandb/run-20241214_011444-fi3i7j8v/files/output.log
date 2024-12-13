@@ -1,0 +1,24 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 128, in main
+    trainer = Trainer(args)
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 120, in __init__
+    self.agent = Agent_DDPG_AAC_Linear(self.state_shape, self.action_type,
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_AAC_linear.py", line 126, in __init__
+    self.scheduler = torch.optim.lr_scheduler.LambdaLR(
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\lr_scheduler.py", line 205, in __init__
+    super(LambdaLR, self).__init__(optimizer, last_epoch, verbose)
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\lr_scheduler.py", line 77, in __init__
+    self.step()
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\lr_scheduler.py", line 154, in step
+    values = self.get_lr()
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\lr_scheduler.py", line 252, in get_lr
+    return [base_lr * lmbda(self.last_epoch)
+  File "D:\nlp\torchenv\lib\site-packages\torch\optim\lr_scheduler.py", line 252, in <listcomp>
+    return [base_lr * lmbda(self.last_epoch)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_AAC_linear.py", line 128, in <lambda>
+    lr_lambda=lambda step: max(1 - step / self.max_training_steps, 0)
+AttributeError: 'Agent_DDPG_AAC_Linear' object has no attribute 'max_training_steps'

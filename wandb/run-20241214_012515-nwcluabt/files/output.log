@@ -1,0 +1,312 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 8.0000| CR: 0.0000 SR: 0.0000:   3%| | 2048/80000 [00:56<37:19,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   5%| | 4058/80000 [01:52<33:03,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:   7%| | 5998/80000 [02:49<35:36,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:  10%| | 7962/80000 [03:43<33:49,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 7.0000| CR: 0.0000 SR: 0.0000:  12%| | 9999/80000 [04:39<35:57,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:  15%|▏| 11958/80000 [05:38<33:21
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 4.0000| CR: 0.0000 SR: 0.0000:  17%|▏| 13983/80000 [06:36<28:29
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 6.0000| CR: 0.0000 SR: 0.0000:  20%|▏| 15957/80000 [07:32<28:48
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 4.0000| CR: 0.0000 SR: 0.0000:  22%|▏| 17958/80000 [08:31<28:01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER: 3.0000| CR: 0.0000 SR: 0.0000:  24%|▏| 19351/80000 [09:15<28:07Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 188, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 243, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_AAC_linear.py", line 174, in train_step
+    mean = torch.zeros_like(tensor).to(tensor.device) + mean,
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_AAC_linear.py", line 48, in forward
+    action = self.randomness_encoder(torch.cat((state_feature, rand_var), dim = 1))
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "E:\Analogous-Disentangled-Actor-Critic\networks\FCNet.py", line 85, in forward
+    x = self.ReLU(x)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\modules\activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "D:\nlp\torchenv\lib\site-packages\torch\nn\functional.py", line 1455, in relu
+    result = torch.relu_(input)
+KeyboardInterrupt

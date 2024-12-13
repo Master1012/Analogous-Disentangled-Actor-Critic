@@ -1,0 +1,15 @@
+D:\nlp\torchenv\lib\site-packages\gymnasium\envs\registration.py:517: DeprecationWarning: [33mWARN: The environment InvertedPendulum-v4 is out of date. You should consider upgrading to version `v5`.
+  logger.deprecation(
+
+ER: 9.0000| CR: 0.0000 SR: 0.0000:   0%|                 | 200/80000 [00:12<12:03, 110.22it/s]Traceback (most recent call last):
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 140, in <module>
+    main()
+  File "E:\Analogous-Disentangled-Actor-Critic\main.py", line 130, in main
+    trainer.train()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 188, in train
+    self.train_offPolicy()
+  File "E:\Analogous-Disentangled-Actor-Critic\trainers\Trainer.py", line 243, in train_offPolicy
+    self.agent.train_step()
+  File "E:\Analogous-Disentangled-Actor-Critic\agents\Agent_DDPG_AAC_linear.py", line 229, in train_step
+    self.balance_temperature=linear_decay_with_warmup(self.start_balance_temperature, self.end_balance_temperature,self.max_training_steps, self.train_step_count, warmup_steps=2000)
+TypeError: linear_decay_with_warmup() missing 1 required positional argument: 'current_step'
